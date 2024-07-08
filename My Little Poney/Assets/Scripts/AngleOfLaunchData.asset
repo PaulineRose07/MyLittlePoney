@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89323887e76f08745b951916dd71244f, type: 3}
   m_Name: AngleOfLaunchData
   m_EditorClassIdentifier: 
-  m_information: 0
+  m_information: 1.5

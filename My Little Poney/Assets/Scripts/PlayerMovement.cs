@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] FloatsScriptable m_speedValue;
     [SerializeField] FloatsScriptable m_angleOfLaunch;
+    [SerializeField] private float m_angleOfBounce = 1;
+    [SerializeField] private float m_speed;
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     //[SerializeField] private bool m_isMoving;
     enum PlayerStates
@@ -45,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    BoucingOnThings(m_speed);
                     Debug.Log("Player bouncing");
                     //m_states = PlayerStates.Bouncing;
                 }
@@ -75,8 +78,9 @@ public class PlayerMovement : MonoBehaviour
         }*/
     }
 
-    private void onLaunch()
+    public void BoucingOnThings(float _speedValue)
     {
-
+        var direction = Vector3.Normalize(Vector3.right + m_angleOfBounce * Vector3.up);
+        m_rigidbody2D.AddForce(direction * _speedValue, ForceMode2D.Impulse);
     }
 }

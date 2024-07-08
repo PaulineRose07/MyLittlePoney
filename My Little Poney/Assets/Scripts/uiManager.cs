@@ -24,12 +24,12 @@ public class uiManager : MonoBehaviour
 
     public void UpdateScoreText(int _score)
     {
-        m_scoreText.text = _score.ToString();
+        m_scoreText.text = _score.ToString() + " points";
     }
 
     public void UpdateDistance(float _distance)
     {
-        m_distanceText.text = _distance.ToString();
+        m_distanceText.text = _distance.ToString() + " m";
     }
 
     public void SpeedAndAngleHaveBeenChosen()
