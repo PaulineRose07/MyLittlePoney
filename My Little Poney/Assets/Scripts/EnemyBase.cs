@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private float m_speedOfBounce = 2f;
+    [SerializeField] private float m_speedOfBounce = 15f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.TryGetComponent<PlayerMovement>(out PlayerMovement _player);

@@ -80,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void BoucingOnThings(float _speedValue)
     {
-        var direction = Vector3.Normalize(Vector3.right + m_angleOfBounce * Vector3.up);
+        m_rigidbody2D.velocity = Vector3.zero;
+        var direction = Vector3.Normalize(Vector3.up + Vector3.right);
         m_rigidbody2D.AddForce(direction * _speedValue, ForceMode2D.Impulse);
     }
 }
