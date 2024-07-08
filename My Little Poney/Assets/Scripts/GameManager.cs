@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject m_player;
     [SerializeField] private int m_score;
     [SerializeField] private float m_distance;
+    [SerializeField] private float m_speedOfRange;
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +33,10 @@ public class GameManager : MonoBehaviour
     public void UpdateDistance()
     {
         // something goes here
+    }
+
+    private IEnumerator SpeedMeter(float _time)
+    {
+        yield return new WaitForSeconds(_time);
     }
 }
