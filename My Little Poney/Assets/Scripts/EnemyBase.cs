@@ -11,13 +11,14 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private AudioClip m_onCollisionSound;
     [SerializeField] private SpriteRenderer m_spriteRenderer;
     private float m_waitForDisablingAfterEffects = .2f;
-    [SerializeField] private UnityEvent m_collisionWithPlayer;
+
+    public GameEvent m_onCollisionWithPlayer;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        m_onCollisionWithPlayer.Raise();
         collision.TryGetComponent<PlayerMovement>(out PlayerMovement _player);
         _player.BoucingOnThings(m_speedOfBounce);
-        m_collisionWithPlayer.Invoke();
         gameObject.SetActive(false);
     }
 

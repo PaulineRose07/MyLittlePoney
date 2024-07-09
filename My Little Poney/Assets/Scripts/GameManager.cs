@@ -13,12 +13,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int m_distance;
     [SerializeField] private float m_speedOfRange;
     [SerializeField] FloatsScriptable m_amountOfEnemyBounce;
-    [SerializeField] private UnityEvent m_collisionWithPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_collisionWithPlayer.AddListener(AddToEnemyCount);
     }
 
     // Update is called once per frame
@@ -44,8 +42,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(_time);
     }
 
-    private void AddToEnemyCount()
+    [ContextMenu("Test")]
+    public void AddToEnemyCount()
     {
         m_amountOfEnemyBounce.m_information++;
+        Debug.Log(m_amountOfEnemyBounce);
     }
 }

@@ -9,12 +9,15 @@ public class GameEvent : ScriptableObject
 
     public void Raise()
     {
-
+        for(int i = 0; i < listeners.Count; i++)
+        {
+            listeners[i].OnEventRaised();
+        }
     }
 
     public void RegisterListener(GameEventListener _listener)
     {
-        if(listeners.Contains(_listener))
+        if(!listeners.Contains(_listener))
         {
             listeners.Add(_listener);
         }
