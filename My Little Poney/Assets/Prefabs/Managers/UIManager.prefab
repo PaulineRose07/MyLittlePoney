@@ -470,7 +470,7 @@ MonoBehaviour:
   m_scoreText: {fileID: 1613161541019506972}
   m_distanceText: {fileID: 3802999999976492435}
   m_speedMeterScreen: {fileID: 2010711649646917739}
-  m_gameOverPanel: {fileID: 0}
+  m_gameOverPanel: {fileID: 8655526754534861917}
 --- !u!114 &1179274156798207578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,12 +905,12 @@ GameObject:
   - component: {fileID: 787596168679050702}
   - component: {fileID: 7118428959346749243}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Panel Game has ended
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &797622572826069668
 RectTransform:
   m_ObjectHideFlags: 0
