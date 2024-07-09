@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("--- Links ---")]
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private ParticleSystem m_particlesOnBounce;
+    [SerializeField] private float m_timer = 1.5f;
+    public GameEvent m_onPlayerStoppedMoving;
     //[SerializeField] private bool m_isMoving;
     enum PlayerStates
     {
@@ -39,7 +41,17 @@ public class PlayerMovement : MonoBehaviour
         switch (m_states)
         {
             case PlayerStates.Default:
-                if (Input.GetKeyDown(KeyCode.Space))
+                /*if (Input.touchCount > 0)
+                {
+                    if (Input.GetTouch(0).phase == TouchPhase.Began)
+                    {
+                        print("Touch has Began");
+                        var direction = Vector3.Normalize(Vector3.right + m_angleOfLaunch.m_information * Vector3.up);
+                        m_rigidbody2D.AddForce(direction * m_speedValue.m_information, ForceMode2D.Impulse);
+                        m_states = PlayerStates.Moving;
+                    }
+                }*/
+                if (Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("player launching");
                     var direction = Vector3.Normalize(Vector3.right + m_angleOfLaunch.m_information * Vector3.up);
@@ -53,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             case PlayerStates.Moving:
                 if(m_amountOfEnemiesBounced.m_information >= m_amountsOfBounceToJump)
                 {
-                    if (Input.GetKeyDown(KeyCode.Space))
+                    if (Input.GetMouseButtonDown(0))
                     {
                         BoucingOnThings(m_speedOfSlam);
                         Debug.Log("Player bouncing");
@@ -61,13 +73,22 @@ public class PlayerMovement : MonoBehaviour
                         //m_states = PlayerStates.Bouncing;
                     }
                 }
+
                 break;
             case PlayerStates.Bouncing:
                 break;
             case PlayerStates.Falling:
                 break;
         }
-
+        
+        if(m_rigidbody2D.velocity.x <= 0 && m_amountOfEnemiesBounced.m_information <= m_amountsOfBounceToJump)
+        {
+            m_timer -= Time.deltaTime;
+            if(m_timer <= 0)
+            {
+                m_onPlayerStoppedMoving.Raise();
+            }
+        }
         /*if (!m_isMoving)
         {
             if (Input.GetKeyDown(KeyCode.Space))
