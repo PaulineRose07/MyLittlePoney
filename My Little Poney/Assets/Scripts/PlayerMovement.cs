@@ -5,10 +5,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("--- scriptables ---")]
     [SerializeField] FloatsScriptable m_speedValue;
     [SerializeField] FloatsScriptable m_angleOfLaunch;
+    [Header("--- Bounce limiter ---")]
+    [SerializeField] FloatsScriptable m_amountOfEnemiesBounced;
+    [SerializeField] private int m_amountsOfBounceToJump = 3;
+    [SerializeField] private float m_speedOfSlam;
+    [Header("--- Bounce Information ---")]
     [SerializeField] private float m_angleOfBounce = 1;
-    [SerializeField] private float m_speed;
+    [Header("--- Links ---")]
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private ParticleSystem m_particlesOnBounce;
     //[SerializeField] private bool m_isMoving;
@@ -45,12 +51,15 @@ public class PlayerMovement : MonoBehaviour
             case PlayerStates.Launching:
                 break;
             case PlayerStates.Moving:
-
-                if (Input.GetKeyDown(KeyCode.Space))
+                if(m_amountOfEnemiesBounced.m_information >= m_amountsOfBounceToJump)
                 {
-                    BoucingOnThings(m_speed);
-                    Debug.Log("Player bouncing");
-                    //m_states = PlayerStates.Bouncing;
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        BoucingOnThings(m_speedOfSlam);
+                        Debug.Log("Player bouncing");
+                        m_amountOfEnemiesBounced.m_information = 0;
+                        //m_states = PlayerStates.Bouncing;
+                    }
                 }
                 break;
             case PlayerStates.Bouncing:

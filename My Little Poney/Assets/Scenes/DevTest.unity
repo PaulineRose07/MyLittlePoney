@@ -861,6 +861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534180732}
   - component: {fileID: 534180733}
+  - component: {fileID: 534180734}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -901,9 +902,34 @@ MonoBehaviour:
   m_distance: 0
   m_speedOfRange: 0
   m_amountOfEnemyBounce: {fileID: 11400000, guid: 3720b0d5cf7c72d46a5980537980fa95, type: 2}
-  m_collisionWithPlayer:
+--- !u!114 &534180734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534180731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af49f4f854bc2e47824969f3928c362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameEvent: {fileID: 11400000, guid: b30b5f3d0044c184a80b727d1b41c457, type: 2}
+  m_response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 534180733}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddToEnemyCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &596068375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6154310175583519319, guid: e065c9071596b04488e5f9049e971ff1, type: 3}
@@ -3433,9 +3459,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: eaa177609c8864847b5e7412d0166997, type: 2}
     - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
+      propertyPath: m_speedOfSlam
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
       propertyPath: m_angleOfLaunch
       value: 
       objectReference: {fileID: 11400000, guid: 92c4f4a3c5c1c61468e54938c8d388be, type: 2}
+    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
+      propertyPath: m_amountOfEnemiesBounced
+      value: 
+      objectReference: {fileID: 11400000, guid: 3720b0d5cf7c72d46a5980537980fa95, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
