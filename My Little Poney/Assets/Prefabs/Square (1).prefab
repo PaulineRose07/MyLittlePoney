@@ -146,9 +146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speedOfBounce: 12
   m_timeForDisabling: 10
-  m_particleWhenTouched: {fileID: 0}
+  m_particleWhenTouched: {fileID: 3672273313223401642, guid: 03228a00e15e3354dac93d55e30ed781, type: 3}
   m_audioSource: {fileID: -726596642756439938}
-  m_onCollisionSound: {fileID: 0}
+  m_onCollisionSound: {fileID: 8300000, guid: f02bb98d15ca99d4bbd6fcf6a39e995f, type: 3}
   m_spriteRenderer: {fileID: 8003493931519927270}
   m_onCollisionWithPlayer: {fileID: 11400000, guid: b30b5f3d0044c184a80b727d1b41c457, type: 2}
 --- !u!82 &-726596642756439938
