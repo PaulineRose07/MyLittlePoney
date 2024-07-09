@@ -47,7 +47,8 @@ public class uiManager : MonoBehaviour
 
     public void RetryGame()
     {
-        string currentScene = SceneManager.GetActiveScene().ToString();
+        string currentScene = SceneManager.GetActiveScene().name;
+        Debug.Log(currentScene);
         SceneManager.LoadScene(currentScene);
     }
 }

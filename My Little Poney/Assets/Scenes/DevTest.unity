@@ -382,7 +382,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.759434, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -530,6 +530,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 52.133003, y: 4.8042874, z: -10.198069}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &187673432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187673433}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &187673433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187673432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.126167, y: 3.8907251, z: -0.21409434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1187,7 +1218,7 @@ Transform:
   m_GameObject: {fileID: 949467699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.256, z: -10}
+  m_LocalPosition: {x: 6.7, y: -2.256, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1367,6 +1398,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1161964660}
+  - component: {fileID: 1161964661}
+  - component: {fileID: 1161964662}
   m_Layer: 0
   m_Name: Enemies Spawner
   m_TagString: Untagged
@@ -1383,12 +1416,47 @@ Transform:
   m_GameObject: {fileID: 1161964659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -107.9677, y: 73.59824, z: -11.581143}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2079226051}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1161964661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161964659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e86e37ada91bf44ebb8b43a5c6e3ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_amountOfBasicEnemiesInPool: 10
+  m_basicEnemyPool: []
+  m_basicEnemyPrefab: {fileID: 7475046128454598632, guid: e065c9071596b04488e5f9049e971ff1, type: 3}
+  m_basicTransform: {fileID: 2079226051}
+--- !u!114 &1161964662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161964659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28765b8f6d93acf4e888e81f74f883ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_player: {fileID: 1298666677}
+  m_pool: {fileID: 1161964661}
+  m_spawningDelay: 1
+  m_minOffsetOfSpawn: 15
+  m_maxOffsetOfSpawn: 30
+  m_amountOfSpawns: 0
 --- !u!4 &1220004880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6154310175583519319, guid: e065c9071596b04488e5f9049e971ff1, type: 3}
@@ -2842,7 +2910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2019764034
 Transform:
   m_ObjectHideFlags: 0
@@ -2991,7 +3059,7 @@ Transform:
   m_GameObject: {fileID: 2049999469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.434286, y: 4.89931, z: -10}
+  m_LocalPosition: {x: 6.6732593, y: 4.90611, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3190,7 +3258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: -3, z: -10}
+  m_FollowOffset: {x: 6.7, y: -3, z: -10}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 1
@@ -3199,6 +3267,37 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+--- !u!1 &2079226050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079226051}
+  m_Layer: 0
+  m_Name: Basic Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079226051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079226050}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1161964660}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2097052667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6154310175583519319, guid: e065c9071596b04488e5f9049e971ff1, type: 3}
@@ -3514,6 +3613,10 @@ PrefabInstance:
       propertyPath: m_amountOfEnemiesBounced
       value: 
       objectReference: {fileID: 11400000, guid: 3720b0d5cf7c72d46a5980537980fa95, type: 2}
+    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
+      propertyPath: m_timerUntilScreenGameOver
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3535,3 +3638,4 @@ SceneRoots:
   - {fileID: 186802555}
   - {fileID: 1161964660}
   - {fileID: 2019764034}
+  - {fileID: 187673433}
