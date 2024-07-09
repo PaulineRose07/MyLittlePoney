@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 45c35149bd761b04cbd468ef7061e0e6
+guid: 763c36bbc9dadca4997b86066d319a15
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,156 +93,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: poney_enmi_anim_0
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 125
-        width: 819
-        height: 816
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6a65e42861cf26409208cfcf0f5f345
-      internalID: -101778203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_enmi_anim_1
-      rect:
-        serializedVersion: 2
-        x: 1104
-        y: 114
-        width: 819
-        height: 819
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6962077772ea8534d9d7d6883af06b24
-      internalID: -643955013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_enmi_anim_2
-      rect:
-        serializedVersion: 2
-        x: 1619
-        y: 931
-        width: 14
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ff58010257d70c4d9c101870fe1de5a
-      internalID: -477478837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_enmi_anim_3
-      rect:
-        serializedVersion: 2
-        x: 2185
-        y: 117
-        width: 823
-        height: 819
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99b4bccbcfc5e6c4abc8ac7cad34b40d
-      internalID: -1111417207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_enmi_anim_4
-      rect:
-        serializedVersion: 2
-        x: 843
-        y: 154
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd29d0406c2fdb349b59449f9c725dc7
-      internalID: -1733754431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_enmi_anim_5
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 114
-        width: 130
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bc7d552713d17d4b95c8124c52944a2
-      internalID: 1019335914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_enmi_anim_6
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 124
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70a939f58c4d8cd47882bef5174f1246
-      internalID: 219302209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -253,14 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      poney_enmi_anim_0: -101778203
-      poney_enmi_anim_1: -643955013
-      poney_enmi_anim_2: -477478837
-      poney_enmi_anim_3: -1111417207
-      poney_enmi_anim_4: -1733754431
-      poney_enmi_anim_5: 1019335914
-      poney_enmi_anim_6: 219302209
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

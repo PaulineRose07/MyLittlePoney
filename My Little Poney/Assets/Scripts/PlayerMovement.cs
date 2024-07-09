@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float m_speedValue;
-    [Range(0,2f)]
-    [SerializeField] private float m_angleOfLaunch;
+    [SerializeField] FloatsScriptable m_speedValue;
+    [SerializeField] FloatsScriptable m_angleOfLaunch;
+    [SerializeField] private float m_angleOfBounce = 1;
+    [SerializeField] private float m_speed;
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     //[SerializeField] private bool m_isMoving;
     enum PlayerStates
@@ -34,8 +35,8 @@ public class PlayerMovement : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("player launching");
-                    var direction = Vector3.Normalize(Vector3.right + m_angleOfLaunch * Vector3.up);
-                    m_rigidbody2D.AddForce(direction * m_speedValue, ForceMode2D.Impulse);
+                    var direction = Vector3.Normalize(Vector3.right + m_angleOfLaunch.m_information * Vector3.up);
+                    m_rigidbody2D.AddForce(direction * m_speedValue.m_information, ForceMode2D.Impulse);
                     m_states = PlayerStates.Moving;
                     //Vector2 direction = Vector2.Normalize(Vector2.right + m_angle * Vector2.up);
                 }
@@ -46,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    BoucingOnThings(m_speed);
                     Debug.Log("Player bouncing");
                     //m_states = PlayerStates.Bouncing;
                 }
@@ -76,8 +78,10 @@ public class PlayerMovement : MonoBehaviour
         }*/
     }
 
-    private void onLaunch()
+    public void BoucingOnThings(float _speedValue)
     {
-
+        m_rigidbody2D.velocity = Vector3.zero;
+        var direction = Vector3.Normalize(Vector3.up + Vector3.right);
+        m_rigidbody2D.AddForce(direction * _speedValue, ForceMode2D.Impulse);
     }
 }

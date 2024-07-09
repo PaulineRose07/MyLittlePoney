@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] uiManager m_uiManager;
     [SerializeField] GameObject m_player;
     [SerializeField] private int m_score;
-    [SerializeField] private float m_distance;
+    [SerializeField] private int m_distance;
     [SerializeField] private float m_speedOfRange;
 
     // Start is called before the first frame update
@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_distance = (int)m_player.transform.position.x;
         m_uiManager.UpdateDistance(m_distance);
         m_uiManager.UpdateScoreText(m_score);
     }
