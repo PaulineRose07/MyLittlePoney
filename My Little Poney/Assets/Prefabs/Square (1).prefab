@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speedOfBounce: 10
+  m_timeForDisabling: 10

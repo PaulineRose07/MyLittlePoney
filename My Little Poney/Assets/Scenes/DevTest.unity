@@ -900,6 +900,10 @@ MonoBehaviour:
   m_score: 0
   m_distance: 0
   m_speedOfRange: 0
+  m_amountOfEnemyBounce: {fileID: 11400000, guid: 3720b0d5cf7c72d46a5980537980fa95, type: 2}
+  m_collisionWithPlayer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &596068375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6154310175583519319, guid: e065c9071596b04488e5f9049e971ff1, type: 3}

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_angleOfBounce = 1;
     [SerializeField] private float m_speed;
     [SerializeField] private Rigidbody2D m_rigidbody2D;
+    [SerializeField] private ParticleSystem m_particlesOnBounce;
     //[SerializeField] private bool m_isMoving;
     enum PlayerStates
     {
