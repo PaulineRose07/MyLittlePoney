@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class uiManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class uiManager : MonoBehaviour
     [SerializeField] private TMP_Text m_distanceText;
     [SerializeField] private GameObject m_speedMeterScreen;
     [SerializeField] private GameObject m_gameOverPanel;
-    
+    [SerializeField] private Slider m_speedMeterSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -50,5 +51,10 @@ public class uiManager : MonoBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
         Debug.Log(currentScene);
         SceneManager.LoadScene(currentScene);
+    }
+
+    public void SpeedMeterMoves()
+    {
+        //m_speedMeterSlider.
     }
 }
