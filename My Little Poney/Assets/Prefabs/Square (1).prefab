@@ -28,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7475046128454598632}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97.3, y: 1.2, z: 0}
-  m_LocalScale: {x: 1.81, y: 3.33, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21c773fa36c7bb49814d38eea2c0abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speedOfBounce: 10
+  m_speedOfBounce: 12
   m_timeForDisabling: 10
   m_particleWhenTouched: {fileID: 0}
   m_audioSource: {fileID: -726596642756439938}

@@ -17,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("--- Links ---")]
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private ParticleSystem m_particlesOnBounce;
-    [SerializeField] private float m_timer = 1.5f;
+    private float m_timer;
+    [SerializeField] private float m_timerUntilScreenGameOver = 1.5f;
     public GameEvent m_onPlayerStoppedMoving;
     //[SerializeField] private bool m_isMoving;
     enum PlayerStates
@@ -26,13 +27,15 @@ public class PlayerMovement : MonoBehaviour
         Launching,
         Moving,
         Bouncing, 
-        Falling
+        Falling,
+        Ending
     }
     private PlayerStates m_states;
 
     private void Start()
     {
         //m_isMoving = false;
+        m_timer = m_timerUntilScreenGameOver;
     }
 
     // Update is called once per frame
@@ -73,40 +76,19 @@ public class PlayerMovement : MonoBehaviour
                         //m_states = PlayerStates.Bouncing;
                     }
                 }
-
+                if (m_amountOfEnemiesBounced.m_information <= m_amountsOfBounceToJump && m_rigidbody2D.velocity.x <= 0)
+                {
+                    m_states = PlayerStates.Ending;
+                }
                 break;
             case PlayerStates.Bouncing:
                 break;
             case PlayerStates.Falling:
                 break;
+            case PlayerStates.Ending:
+                PayerstoppedMoving();
+                break;
         }
-        
-        if(m_rigidbody2D.velocity.x <= 0 && m_amountOfEnemiesBounced.m_information <= m_amountsOfBounceToJump)
-        {
-            m_timer -= Time.deltaTime;
-            if(m_timer <= 0)
-            {
-                m_onPlayerStoppedMoving.Raise();
-            }
-        }
-        /*if (!m_isMoving)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Debug.Log("player launching");
-                //var direction = Vector2.Normalize(Vector2.forward + )
-                m_rigidbody2D.AddForce(Vector3.forward * m_speedValue, ForceMode2D.Impulse);
-                m_isMoving = true;
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Debug.Log("Player bouncing");
-                //should be able to bounce when touching enemies
-            }
-        }*/
     }
 
     public void BoucingOnThings(float _speedValue)
@@ -114,5 +96,14 @@ public class PlayerMovement : MonoBehaviour
         m_rigidbody2D.velocity = Vector3.zero;
         var direction = Vector3.Normalize(Vector3.up + Vector3.right);
         m_rigidbody2D.AddForce(direction * _speedValue, ForceMode2D.Impulse);
+    }
+
+    private void PayerstoppedMoving()
+    {
+        m_timer -= Time.deltaTime;
+        if (m_timer <= 0)
+        {
+            m_onPlayerStoppedMoving.Raise();
+        }
     }
 }
