@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a77a7138dd8eb2a418018d4a6e10f972
+guid: 4f5bfdf5278714844b4c11b8e7a77cb7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,112 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: poney_anim_jump_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 76
-        width: 1029
-        height: 744
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea2306afe80548d49b5b7f7873fe5b2f
-      internalID: -1455675782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_anim_jump_1
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 74
-        width: 1005
-        height: 891
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fd279af27040774887b21813ea26240
-      internalID: -826508956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_anim_jump_2
-      rect:
-        serializedVersion: 2
-        x: 2056
-        y: 358
-        width: 1005
-        height: 454
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b7049195a34071408a559e76861ef20
-      internalID: 261174942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_anim_jump_3
-      rect:
-        serializedVersion: 2
-        x: 3074
-        y: 0
-        width: 1020
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29a5e1f1aaab83d408c88737bedb10df
-      internalID: 1533962155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poney_anim_jump_4
-      rect:
-        serializedVersion: 2
-        x: 4244
-        y: 72
-        width: 876
-        height: 783
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f54a8c41a97c840428f2d2975c67b142
-      internalID: 280664974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -224,12 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      poney_anim_jump_0: -1455675782
-      poney_anim_jump_1: -826508956
-      poney_anim_jump_2: 261174942
-      poney_anim_jump_3: 1533962155
-      poney_anim_jump_4: 280664974
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
