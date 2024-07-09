@@ -5,12 +5,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("--- scriptables ---")]
     [SerializeField] FloatsScriptable m_speedValue;
     [SerializeField] FloatsScriptable m_angleOfLaunch;
+    [Header("--- Bounce limiter ---")]
+    [SerializeField] FloatsScriptable m_amountOfEnemiesBounced;
+    [SerializeField] private int m_amountsOfBounceToJump = 3;
+    [SerializeField] private float m_speedOfSlam;
+    [Header("--- Bounce Information ---")]
     [SerializeField] private float m_angleOfBounce = 1;
-    [SerializeField] private float m_speed;
+    [Header("--- Links ---")]
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private ParticleSystem m_particlesOnBounce;
+    [SerializeField] private float m_timer = 1.5f;
+    public GameEvent m_onPlayerStoppedMoving;
     //[SerializeField] private bool m_isMoving;
     enum PlayerStates
     {
@@ -33,7 +41,17 @@ public class PlayerMovement : MonoBehaviour
         switch (m_states)
         {
             case PlayerStates.Default:
-                if (Input.GetKeyDown(KeyCode.Space))
+                /*if (Input.touchCount > 0)
+                {
+                    if (Input.GetTouch(0).phase == TouchPhase.Began)
+                    {
+                        print("Touch has Began");
+                        var direction = Vector3.Normalize(Vector3.right + m_angleOfLaunch.m_information * Vector3.up);
+                        m_rigidbody2D.AddForce(direction * m_speedValue.m_information, ForceMode2D.Impulse);
+                        m_states = PlayerStates.Moving;
+                    }
+                }*/
+                if (Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("player launching");
                     var direction = Vector3.Normalize(Vector3.right + m_angleOfLaunch.m_information * Vector3.up);
@@ -45,20 +63,32 @@ public class PlayerMovement : MonoBehaviour
             case PlayerStates.Launching:
                 break;
             case PlayerStates.Moving:
-
-                if (Input.GetKeyDown(KeyCode.Space))
+                if(m_amountOfEnemiesBounced.m_information >= m_amountsOfBounceToJump)
                 {
-                    BoucingOnThings(m_speed);
-                    Debug.Log("Player bouncing");
-                    //m_states = PlayerStates.Bouncing;
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        BoucingOnThings(m_speedOfSlam);
+                        Debug.Log("Player bouncing");
+                        m_amountOfEnemiesBounced.m_information = 0;
+                        //m_states = PlayerStates.Bouncing;
+                    }
                 }
+
                 break;
             case PlayerStates.Bouncing:
                 break;
             case PlayerStates.Falling:
                 break;
         }
-
+        
+        if(m_rigidbody2D.velocity.x <= 0 && m_amountOfEnemiesBounced.m_information <= m_amountsOfBounceToJump)
+        {
+            m_timer -= Time.deltaTime;
+            if(m_timer <= 0)
+            {
+                m_onPlayerStoppedMoving.Raise();
+            }
+        }
         /*if (!m_isMoving)
         {
             if (Input.GetKeyDown(KeyCode.Space))
