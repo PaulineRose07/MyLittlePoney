@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class FlyingSpawner : MonoBehaviour
 {
-
+    [Header("--- In game Links ---")]
     [SerializeField] GameObject m_player;
     [SerializeField] PoolSystem m_pool;
-    [SerializeField] private float m_spawningDelay;
-    private float m_timerOfSpawn;
+    [Header("--- Balancing Info ---")]
     [SerializeField] private int m_minOffsetOfSpawnX;
     [SerializeField] private int m_maxOffsetOfSpawnX;
     [SerializeField] private int m_minOffsetY;
     [SerializeField] private int m_maxOffsetY;
     [SerializeField] private int m_amountOfSpawns;
+    [SerializeField] private float m_spawningDelay;
+    private float m_timerOfSpawn;
 
 
 

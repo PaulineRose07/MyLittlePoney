@@ -1,17 +1,21 @@
 using System.Collections;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class EnemyBase : MonoBehaviour
 {
+    [Header("--- Enemy Info To Equilibrate ---")]
     [SerializeField] private float m_speedOfBounce = 15f;
     [SerializeField] private float m_timeForDisabling = 10f;
-    [SerializeField] private ParticleSystem m_particleWhenTouched;
-    [SerializeField] AudioSource m_audioSource;
-    [SerializeField] private AudioClip m_onCollisionSound;
+    [SerializeField] private float m_waitForDisablingAfterEffects = .2f;
+    [Space(12)]
     [SerializeField] private SpriteRenderer m_spriteRenderer;
-    private float m_waitForDisablingAfterEffects = .2f;
-
+    [Header("--- Effects Links ---")]
+    [SerializeField] private AudioSource m_audioSource;
+    [SerializeField] private AudioClip m_onCollisionSound;
+    [SerializeField] private ParticleSystem m_particleWhenTouched;
+    [Header("--- Events ---")]
     public GameEvent m_onCollisionWithPlayer;
 
     private void OnTriggerEnter2D(Collider2D collision)

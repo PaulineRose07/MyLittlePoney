@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class BasicEnemySpawner : MonoBehaviour
 {
+    [Header("--- In Game Links ---")]
     [SerializeField] GameObject m_player;
     [SerializeField] PoolSystem m_pool;
-    [SerializeField] private float m_spawningDelay;
-    private float m_timerOfSpawn;
+    [Header("--- Balancing Info")]
     [SerializeField] private int m_minOffsetOfSpawnX;
     [SerializeField] private int m_maxOffsetOfSpawnX;
     [SerializeField] private int m_amountOfSpawns;
     [SerializeField] private float m_baseSpawnY = 1.48f;
+    [SerializeField] private float m_spawningDelay;
+    private float m_timerOfSpawn;
     
 
 

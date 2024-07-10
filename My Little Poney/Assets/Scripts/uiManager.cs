@@ -7,9 +7,10 @@ using UnityEngine.UI;
 
 public class uiManager : MonoBehaviour
 {
-
+    [Header("--- Texts ---")]
     [SerializeField] private TMP_Text m_scoreText;
     [SerializeField] private TMP_Text m_distanceText;
+    [Header("--- Links ---")]
     [SerializeField] private GameObject m_speedMeterScreen;
     [SerializeField] private GameObject m_gameOverPanel;
     [SerializeField] private Slider m_speedMeterSlider;

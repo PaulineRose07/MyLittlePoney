@@ -16,18 +16,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_angleOfBounce = 1;
     [Header("--- Links ---")]
     [SerializeField] private Rigidbody2D m_rigidbody2D;
-    [SerializeField] private ParticleSystem m_particlesOnBounce;
+    [SerializeField] private AudioSource m_audioSource;
     [Header("--- Game Ending ---")]
     private float m_timer;
     [SerializeField] private float m_timerUntilScreenGameOver = 1.5f;
-    [Header("--- Particle Systems --- ")]
+    [Header("--- Effects Links --- ")]
     [SerializeField] private ParticleSystem m_particlesBouncing;
-    //[SerializeField] private ParticleSystem m_particlesEnding;
+    [SerializeField] private AudioClip m_soundOnJump;
+
     [Header("--- Game Events ---")]
     public GameEvent m_onPlayerStoppedMoving;
     public GameEvent m_onPlayerIsLaunching;
     public GameEvent m_onPlayerHasJumped;
-    //[SerializeField] private bool m_isMoving;
+
     enum PlayerStates
     {
         Default,

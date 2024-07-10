@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class CloudBase : MonoBehaviour
 {
+    [Header("--- Links ---")]
     [SerializeField] Sprite[] m_spriteClouds;
     [SerializeField] SpriteRenderer m_spriteRenderer;
+    [Header("--- Balancing ---")]
     [SerializeField] private float m_speedOfBounce = 15f;
     [SerializeField] private float m_timeForDisabling = 10f;
+    [SerializeField] private float m_waitForDisablingAfterEffects = .2f;
+    [Header("Effects")]
+    [SerializeField] private AudioSource m_audioSource;
     [SerializeField] private ParticleSystem m_particleWhenTouched;
-    [SerializeField] AudioSource m_audioSource;
     [SerializeField] private AudioClip m_onCollisionSound;
-    private float m_waitForDisablingAfterEffects = .2f;
 
     public GameEvent m_onCollisionWithPlayer;
     private void Awake()

@@ -9,17 +9,20 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private float m_speedMeterRanger;
+    [Header("--- In Game Links ---")]
     [SerializeField] uiManager m_uiManager;
     [SerializeField] GameObject m_player;
+    [Header("--- Info ---")]
     [SerializeField] private int m_score;
     [SerializeField] private int m_distance;
     [SerializeField] private float m_speedOfRange;
+    [Header("--- Scriptable Objects ---")]
     [SerializeField] FloatsScriptable m_amountOfEnemyBounce;
     [SerializeField] FloatsScriptable m_AngleOfLaunchData;
     [SerializeField] FloatsScriptable m_speedData;
     [SerializeField] FloatsScriptable m_bonusPoints;
-    [SerializeField] private FloatsScriptable m_maxAmountOfBoost;
+    [SerializeField] FloatsScriptable m_maxAmountOfBoost;
+    [Header("--- Links ---")]
     [SerializeField] private AnimationCurve m_animationCurve;
     [SerializeField] private Slider m_sliderLaunchingPlayer;
 
@@ -40,11 +43,6 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(float _score)
     {
         m_score += (int) m_bonusPoints.m_information;
-    }
-
-    public void UpdateDistance()
-    {
-        // something goes here
     }
 
     private IEnumerator SpeedMeter(float _time)
@@ -72,13 +70,6 @@ public class GameManager : MonoBehaviour
         float percentage = m_amountOfEnemyBounce.m_information / m_maxAmountOfBoost.m_information;
         m_uiManager.UpdateBoostUI(percentage);
     }
-
-    /*public void ChangeAngleOfLaunch(float _angleFromSlider)
-    {
-        m_AngleOfLaunchData.m_information = _angleFromSlider;
-        
-    }*/
-
     public void ChangeAngleWithSlider()
     {
         m_AngleOfLaunchData.m_information = m_sliderLaunchingPlayer.value;
@@ -88,12 +79,4 @@ public class GameManager : MonoBehaviour
     {
         m_speedData.m_information = m_animationCurve.Evaluate(m_sliderLaunchingPlayer.value);
     }
-
-
-    /*public void ChangeSpeedOfLaunch(float _speedFromSlider)
-    {
-        //_speedFromSlider = m_slider.value;
-
-        m_speedData.SetValue(m_animationCurve.Evaluate(_speedFromSlider));
-    }*/
 }
