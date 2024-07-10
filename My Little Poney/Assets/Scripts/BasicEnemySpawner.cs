@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class SpawnerManager : MonoBehaviour
+public class BasicEnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject m_player;
     [SerializeField] PoolSystem m_pool;
     [SerializeField] private float m_spawningDelay;
     private float m_timerOfSpawn;
-    [SerializeField] private int m_minOffsetOfSpawn;
-    [SerializeField] private int m_maxOffsetOfSpawn;
+    [SerializeField] private int m_minOffsetOfSpawnX;
+    [SerializeField] private int m_maxOffsetOfSpawnX;
     [SerializeField] private int m_amountOfSpawns;
     
 
@@ -29,17 +29,17 @@ public class SpawnerManager : MonoBehaviour
         {
             for(int i = 0; i < m_amountOfSpawns; i++) 
             {
-                BasicEnemySpawn();
+                Spawn();
             }
             m_timerOfSpawn = m_spawningDelay;
         }
     }
 
     [ContextMenu("Test Spawn")]
-    private void BasicEnemySpawn()
+    private void Spawn()
     {
-        var offsetMin = m_player.transform.position + Vector3.right * m_minOffsetOfSpawn;
-        var offetMax = m_player.transform.position + Vector3.right * m_maxOffsetOfSpawn;
+        var offsetMin = m_player.transform.position + Vector3.right * m_minOffsetOfSpawnX;
+        var offetMax = m_player.transform.position + Vector3.right * m_maxOffsetOfSpawnX;
         var randomPositionX = Random.Range(offsetMin.x, offetMax.x);
         GameObject instance = m_pool.GetFirstAvalailableBasicEnemyInPool();
         instance.transform.position = new Vector3(randomPositionX, 0,0);

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] FloatsScriptable m_speedData;
     [SerializeField] private FloatsScriptable m_maxAmountOfBoost;
     [SerializeField] private AnimationCurve m_animationCurve;
+    [SerializeField] private Slider m_sliderLaunchingPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -70,15 +72,26 @@ public class GameManager : MonoBehaviour
         m_uiManager.UpdateBoostUI(percentage);
     }
 
-    public void ChangeAngleOfLaunch(float _angleFromSlider)
+    /*public void ChangeAngleOfLaunch(float _angleFromSlider)
     {
         m_AngleOfLaunchData.m_information = _angleFromSlider;
         
+    }*/
+
+    public void ChangeAngleWithSlider()
+    {
+        m_AngleOfLaunchData.m_information = m_sliderLaunchingPlayer.value;
     }
 
-    public void ChangeSpeedOfLaunch(float _speedFromSlider)
+    public void ChangeSpeedWithSlider()
+    {
+        m_speedData.m_information = m_animationCurve.Evaluate(m_sliderLaunchingPlayer.value);
+    }
+
+    /*public void ChangeSpeedOfLaunch(float _speedFromSlider)
     {
         //_speedFromSlider = m_slider.value;
-        m_speedData.m_information = m_animationCurve.Evaluate(_speedFromSlider);
-    }
+
+        m_speedData.SetValue(m_animationCurve.Evaluate(_speedFromSlider));
+    }*/
 }
