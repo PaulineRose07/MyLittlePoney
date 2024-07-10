@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class EnemyBase : MonoBehaviour
 {
+    [SerializeField] private float m_minRandomSpeed = 1f;
+    [SerializeField] private float m_maxRandomSpeed = 5f;
+    private float m_randomSpeed;
     [Header("--- Enemy Info To Equilibrate ---")]
     [SerializeField] private float m_speedOfBounce = 15f;
     [SerializeField] private float m_timeForDisabling = 10f;
@@ -18,6 +21,10 @@ public class EnemyBase : MonoBehaviour
     [Header("--- Events ---")]
     public GameEvent m_onCollisionWithPlayer;
 
+    private void Start()
+    {
+        m_randomSpeed = Random.Range(m_minRandomSpeed, m_maxRandomSpeed);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         m_onCollisionWithPlayer.Raise();
@@ -26,6 +33,10 @@ public class EnemyBase : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        transform.Translate(transform.right * m_randomSpeed * Time.deltaTime);
+    }
     private void OnEnable()
     {
         Invoke("DisableAfterAFewSeconds", m_timeForDisabling);
