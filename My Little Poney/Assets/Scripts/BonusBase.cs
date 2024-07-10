@@ -29,7 +29,7 @@ public class BonusBase : MonoBehaviour
     private IEnumerator AddEffects()
     {
         m_spriteRenderer.enabled = false;
-        if (m_particleSystem != null) m_particleSystem.Play();
+        //if (m_particleSystem != null) m_particleSystem.Play();
         yield return new WaitForSeconds(.5f);
         DisableBonus();
 
