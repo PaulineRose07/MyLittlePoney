@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public GameEvent m_onPlayerStoppedMoving;
     public GameEvent m_onPlayerIsLaunching;
     public GameEvent m_onPlayerHasJumped;
+    public GameEvent m_onGroundHasBeenTouched;
 
     enum PlayerStates
     {

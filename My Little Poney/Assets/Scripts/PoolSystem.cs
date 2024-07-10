@@ -72,7 +72,7 @@ public class PoolSystem : MonoBehaviour
         m_poolOfFruits.Add(instance);
         return instance;
     }
-    public GameObject GetFirstAvailableStart()
+    public GameObject GetFirstAvailableStar()
     {
         for(int i = 0; i < m_poolOfStar.Count; i++)
         {

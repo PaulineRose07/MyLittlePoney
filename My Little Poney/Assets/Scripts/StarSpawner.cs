@@ -50,7 +50,7 @@ public class StarSpawner : MonoBehaviour
         Vector3 offsetMaxY = m_player.transform.position + Vector3.up * m_maxOffsetY;
         float randomPositionY = Random.Range(offsetMinY.y, offsetMaxY.y);
 
-        GameObject instance = m_pool.GetFirstAvailableStart();
+        GameObject instance = m_pool.GetFirstAvailableStar();
         instance.transform.position = new Vector3(randomPositionX, randomPositionY, 0);
         instance.SetActive(true);
     }

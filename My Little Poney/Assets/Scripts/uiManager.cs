@@ -36,7 +36,7 @@ public class uiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(m_speedMeterSlider.value);
+        
     }
 
     public void UpdateScoreText(int _score)
