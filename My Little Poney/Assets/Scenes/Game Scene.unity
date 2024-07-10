@@ -1860,6 +1860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pool And Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 376958818280900058, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1298666677}
     - target: {fileID: 783072359663485135, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
       propertyPath: m_amountOfBasicEnemiesInPool
       value: 15
@@ -1870,7 +1874,7 @@ PrefabInstance:
       objectReference: {fileID: 1298666677}
     - target: {fileID: 1266919353260672990, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
       propertyPath: m_spawningDelay
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1266919353260672990, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
       propertyPath: m_amountOfSpawns
@@ -1896,6 +1900,10 @@ PrefabInstance:
       propertyPath: m_amountOfSpawns
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8335623495365202175, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1298666677}
     - target: {fileID: 8785934231933493340, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
