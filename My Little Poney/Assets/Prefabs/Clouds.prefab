@@ -51,10 +51,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 708d17744bf0c4b4f852291aac23c9ef, type: 3}
   - {fileID: 21300000, guid: 3dfa09d2888c1c4488fd092de6aa5561, type: 3}
   m_spriteRenderer: {fileID: 1647667449785304717}
-  m_speedOfBounce: 15
-  m_timeForDisabling: 10
-  m_particleWhenTouched: {fileID: 0}
+  m_speedOfBounce: 13
+  m_timeForDisabling: 25
+  m_waitForDisablingAfterEffects: 0.2
   m_audioSource: {fileID: 0}
+  m_particleWhenTouched: {fileID: 0}
   m_onCollisionSound: {fileID: 0}
   m_onCollisionWithPlayer: {fileID: 11400000, guid: b30b5f3d0044c184a80b727d1b41c457, type: 2}
 --- !u!61 &328650262945818467
