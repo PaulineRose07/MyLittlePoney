@@ -21,6 +21,11 @@ public class PoolSystem : MonoBehaviour
     [SerializeField] private int m_amountOfStarsInPool;
     [SerializeField] private GameObject m_starPrefab;
     [SerializeField] private Transform m_starTransform;
+    [Header("--- Fruits Pool ---")]
+    [SerializeField] private List<GameObject> m_poolOfFruits = new List<GameObject>();
+    [SerializeField] private int m_amountOfFruitsInPool;
+    [SerializeField] private GameObject m_fruitsPrefab;
+    [SerializeField] private Transform m_fruitsTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +50,28 @@ public class PoolSystem : MonoBehaviour
             instance.gameObject.SetActive(false);
             m_poolOfStar.Add(instance);
         }
+
+        for(int i = 0; i < m_amountOfFruitsInPool; i++)
+        {
+            var instance = Instantiate(m_fruitsPrefab, m_fruitsTransform);
+            instance.gameObject.SetActive(false);
+            m_poolOfFruits.Add(instance);
+        }
     }
 
+
+    public GameObject GetFirstAvailableBasket()
+    {
+        for(int i = 0; i < m_poolOfFruits.Count; i++)
+        {
+            if (m_poolOfFruits[i].activeSelf == false) return m_poolOfFruits[i];
+        }
+
+        var instance = Instantiate(m_fruitsPrefab, m_fruitsTransform);
+        instance.gameObject.SetActive(false);
+        m_poolOfFruits.Add(instance);
+        return instance;
+    }
     public GameObject GetFirstAvailableStart()
     {
         for(int i = 0; i < m_poolOfStar.Count; i++)

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1266919353260672990}
   - component: {fileID: 2934159912782336764}
   - component: {fileID: 376958818280900058}
+  - component: {fileID: 8335623495365202175}
   m_Layer: 0
   m_Name: Enemies Spawner
   m_TagString: Untagged
@@ -63,6 +64,10 @@ MonoBehaviour:
   m_amountOfStarsInPool: 2
   m_starPrefab: {fileID: 8094576131387871155, guid: 7f17e0d84949c0e4190a283465492a01, type: 3}
   m_starTransform: {fileID: 2335080076565639150}
+  m_poolOfFruits: []
+  m_amountOfFruitsInPool: 2
+  m_fruitsPrefab: {fileID: 2994609860591189469, guid: f2a5f280a8b901748a00b9885a6a7d68, type: 3}
+  m_fruitsTransform: {fileID: 3988948952956453978}
 --- !u!114 &1266919353260672990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +128,25 @@ MonoBehaviour:
   m_amountOfSpawns: 0
   m_spawningDelay: 0
   m_offsetBetweenSpawns: 0
+--- !u!114 &8335623495365202175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57160639825592604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84275db193e79164f8a6cf8d295fe9e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_player: {fileID: 0}
+  m_pool: {fileID: 783072359663485135}
+  m_minOffsetOfSpawnX: 0
+  m_maxOffsetOfSpawnX: 0
+  m_amountOfSpawns: 0
+  m_baseSpawnY: 1.48
+  m_spawningDelay: 0
 --- !u!1 &58080545807942172
 GameObject:
   m_ObjectHideFlags: 0
