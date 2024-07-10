@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7246660462222389616}
+  - {fileID: 8090897324986084536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783072359663485135
@@ -46,10 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e86e37ada91bf44ebb8b43a5c6e3ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_poolOfBasicEnemy: []
   m_amountOfBasicEnemiesInPool: 10
-  m_basicEnemyPool: []
   m_basicEnemyPrefab: {fileID: 7475046128454598632, guid: e065c9071596b04488e5f9049e971ff1, type: 3}
   m_basicTransform: {fileID: 7246660462222389616}
+  m_poolOfFlyingEnemy: []
+  m_amountOfFlyingEnemiesInPool: 0
+  m_flyingEnemyPrefab: {fileID: 0}
+  m_flyingTransfom: {fileID: 8090897324986084536}
 --- !u!114 &1266919353260672990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,7 +72,7 @@ MonoBehaviour:
   m_spawningDelay: 1
   m_minOffsetOfSpawn: 15
   m_maxOffsetOfSpawn: 45
-  m_amountOfSpawns: 15
+  m_amountOfSpawns: 3
 --- !u!1 &58080545807942172
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +98,37 @@ Transform:
   m_GameObject: {fileID: 58080545807942172}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8785934231933493340}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6123591273272202494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8090897324986084536}
+  m_Layer: 0
+  m_Name: Flying Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8090897324986084536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6123591273272202494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

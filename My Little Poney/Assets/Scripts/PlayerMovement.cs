@@ -17,8 +17,13 @@ public class PlayerMovement : MonoBehaviour
     [Header("--- Links ---")]
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private ParticleSystem m_particlesOnBounce;
+    [Header("--- Game Ending ---")]
     private float m_timer;
     [SerializeField] private float m_timerUntilScreenGameOver = 1.5f;
+    [Header("--- Particle Systems --- ")]
+    [SerializeField] private ParticleSystem m_particlesBouncing;
+    //[SerializeField] private ParticleSystem m_particlesEnding;
+    [Header("--- Game Events ---")]
     public GameEvent m_onPlayerStoppedMoving;
     public GameEvent m_onPlayerIsLaunching;
     public GameEvent m_onPlayerHasJumped;
@@ -38,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //m_isMoving = false;
         m_timer = m_timerUntilScreenGameOver;
+        m_rigidbody2D.velocity = Vector3.zero;
+        m_states = PlayerStates.Default;
     }
 
     // Update is called once per frame
@@ -100,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         m_rigidbody2D.velocity = Vector3.zero;
         var direction = Vector3.Normalize(Vector3.up + Vector3.right);
         m_rigidbody2D.AddForce(direction * _speedValue, ForceMode2D.Impulse);
+        if(m_particlesBouncing != null) m_particlesBouncing.Play();
     }
 
     private void PayerstoppedMoving()

@@ -21,7 +21,9 @@ public class uiManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_pause = false;
         m_speedMeterScreen.SetActive(true);
+        StartCoroutine(SpeedMeterMoves());
     }
 
     public void ButtonIsPressed()
@@ -33,7 +35,7 @@ public class uiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(SpeedMeterMoves());
+        Debug.Log(m_speedMeterSlider.value);
     }
 
     public void UpdateScoreText(int _score)
@@ -44,11 +46,6 @@ public class uiManager : MonoBehaviour
     public void UpdateDistance(float _distance)
     {
         m_distanceText.text = _distance.ToString() + " m";
-    }
-
-    public void SpeedAndAngleHaveBeenChosen()
-    {
-        m_speedMeterScreen.SetActive(false);
     }
 
     public void GameHasEnded()
@@ -63,6 +60,10 @@ public class uiManager : MonoBehaviour
         SceneManager.LoadScene(currentScene);
     }
 
+    public void SpeedAndAngleHaveBeenChosen()
+    {
+        m_speedMeterScreen.SetActive(false);
+    }
     private IEnumerator SpeedMeterMoves()
     {
 
