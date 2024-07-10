@@ -12,6 +12,7 @@ public class BasicEnemySpawner : MonoBehaviour
     [SerializeField] private int m_minOffsetOfSpawnX;
     [SerializeField] private int m_maxOffsetOfSpawnX;
     [SerializeField] private int m_amountOfSpawns;
+    [SerializeField] private float m_baseSpawnY = 1.48f;
     
 
 
@@ -42,7 +43,7 @@ public class BasicEnemySpawner : MonoBehaviour
         var offetMax = m_player.transform.position + Vector3.right * m_maxOffsetOfSpawnX;
         var randomPositionX = Random.Range(offsetMin.x, offetMax.x);
         GameObject instance = m_pool.GetFirstAvalailableBasicEnemyInPool();
-        instance.transform.position = new Vector3(randomPositionX, 0,0);
+        instance.transform.position = new Vector3(randomPositionX, m_baseSpawnY, 0);
         instance.SetActive(true);
     }
 }

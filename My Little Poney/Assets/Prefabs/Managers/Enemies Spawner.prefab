@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8785934231933493340}
   - component: {fileID: 783072359663485135}
   - component: {fileID: 1266919353260672990}
+  - component: {fileID: 2934159912782336764}
   m_Layer: 0
   m_Name: Enemies Spawner
   m_TagString: Untagged
@@ -52,9 +53,13 @@ MonoBehaviour:
   m_basicEnemyPrefab: {fileID: 7475046128454598632, guid: e065c9071596b04488e5f9049e971ff1, type: 3}
   m_basicTransform: {fileID: 7246660462222389616}
   m_poolOfFlyingEnemy: []
-  m_amountOfFlyingEnemiesInPool: 0
-  m_flyingEnemyPrefab: {fileID: 0}
+  m_amountOfFlyingEnemiesInPool: 5
+  m_flyingEnemyPrefab: {fileID: 5935133629786837327, guid: 1488af799093f7c4995fd24394e26081, type: 3}
   m_flyingTransfom: {fileID: 8090897324986084536}
+  m_poolOfBonus: []
+  m_amountOfBonusesInPool: 0
+  m_bonusPrefab: {fileID: 0}
+  m_bonusTransform: {fileID: 0}
 --- !u!114 &1266919353260672990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,9 +75,30 @@ MonoBehaviour:
   m_player: {fileID: 0}
   m_pool: {fileID: 783072359663485135}
   m_spawningDelay: 1
-  m_minOffsetOfSpawn: 15
-  m_maxOffsetOfSpawn: 45
-  m_amountOfSpawns: 3
+  m_minOffsetOfSpawnX: 15
+  m_maxOffsetOfSpawnX: 25
+  m_amountOfSpawns: 2
+  m_baseSpawnY: 1.48
+--- !u!114 &2934159912782336764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57160639825592604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6874a729490f6d040bec70b36c5cdeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_player: {fileID: 0}
+  m_pool: {fileID: 783072359663485135}
+  m_spawningDelay: 1.5
+  m_minOffsetOfSpawnX: 15
+  m_maxOffsetOfSpawnX: 25
+  m_minOffsetY: 1
+  m_maxOffsetY: 15
+  m_amountOfSpawns: 2
 --- !u!1 &58080545807942172
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 58080545807942172}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
