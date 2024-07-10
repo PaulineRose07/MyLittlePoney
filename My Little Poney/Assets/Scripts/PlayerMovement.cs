@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] FloatsScriptable m_angleOfLaunch;
     [Header("--- Bounce limiter ---")]
     [SerializeField] FloatsScriptable m_amountOfEnemiesBounced;
-    [SerializeField] private int m_amountsOfBounceToJump = 3;
+    [SerializeField] FloatsScriptable m_maxAmountForBoost;
     [SerializeField] private float m_speedOfSlam;
     [Header("--- Bounce Information ---")]
     [SerializeField] private float m_angleOfBounce = 1;
@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private float m_timer;
     [SerializeField] private float m_timerUntilScreenGameOver = 1.5f;
     public GameEvent m_onPlayerStoppedMoving;
+    public GameEvent m_onPlayerIsLaunching;
+    public GameEvent m_onPlayerHasJumped;
     //[SerializeField] private bool m_isMoving;
     enum PlayerStates
     {
@@ -56,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
                 }*/
                 if (Input.GetMouseButtonDown(0))
                 {
+                    m_onPlayerIsLaunching.Raise();
                     Debug.Log("player launching");
                     var direction = Vector3.Normalize(Vector3.right + m_angleOfLaunch.m_information * Vector3.up);
                     m_rigidbody2D.AddForce(direction * m_speedValue.m_information, ForceMode2D.Impulse);
@@ -66,17 +69,18 @@ public class PlayerMovement : MonoBehaviour
             case PlayerStates.Launching:
                 break;
             case PlayerStates.Moving:
-                if(m_amountOfEnemiesBounced.m_information >= m_amountsOfBounceToJump)
+                if(m_amountOfEnemiesBounced.m_information >= m_maxAmountForBoost.m_information)
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
                         BoucingOnThings(m_speedOfSlam);
                         Debug.Log("Player bouncing");
+                        m_onPlayerHasJumped.Raise();
                         m_amountOfEnemiesBounced.m_information = 0;
                         //m_states = PlayerStates.Bouncing;
                     }
                 }
-                if (m_amountOfEnemiesBounced.m_information <= m_amountsOfBounceToJump && m_rigidbody2D.velocity.x <= 0)
+                if (m_amountOfEnemiesBounced.m_information <= m_maxAmountForBoost.m_information && m_rigidbody2D.velocity.x <= 0)
                 {
                     m_states = PlayerStates.Ending;
                 }

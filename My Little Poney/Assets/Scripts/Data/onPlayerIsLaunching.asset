@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89323887e76f08745b951916dd71244f, type: 3}
-  m_Name: AngleOfLaunchData
+  m_Script: {fileID: 11500000, guid: 7686a1a9f3c186649a9ab18835a9b752, type: 3}
+  m_Name: onPlayerIsLaunching
   m_EditorClassIdentifier: 
-  m_information: 0.853408
+  listeners: []

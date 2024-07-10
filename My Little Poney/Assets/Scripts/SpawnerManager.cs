@@ -41,7 +41,7 @@ public class SpawnerManager : MonoBehaviour
         var offsetMin = m_player.transform.position + Vector3.right * m_minOffsetOfSpawn;
         var offetMax = m_player.transform.position + Vector3.right * m_maxOffsetOfSpawn;
         var randomPositionX = Random.Range(offsetMin.x, offetMax.x);
-        GameObject instance = m_pool.GetFirstAvalailableEnemyInPool();
+        GameObject instance = m_pool.GetFirstAvalailableBasicEnemyInPool();
         instance.transform.position = new Vector3(randomPositionX, 0,0);
         instance.SetActive(true);
     }
