@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BonusBase : MonoBehaviour
 {
-    [SerializeField] private FloatsScriptable m_pointsToGive;
+    //[SerializeField] private FloatsScriptable m_pointsToGive;
     [Header("--- In game Links ---")]
     [SerializeField] private SpriteRenderer m_spriteRenderer;
     [SerializeField] private AudioSource m_audioSource;
@@ -12,12 +12,13 @@ public class BonusBase : MonoBehaviour
     [SerializeField] private ParticleSystem m_particlesCollision;
     [SerializeField] private AudioClip m_audioCollision;
     [Header("--- Events ---")]
-    public GameEvent m_bonusHasBeenTouched;
+    public GameEvent m_BonusHasBeenTouched;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        m_bonusHasBeenTouched.Raise();
-        StartCoroutine(AddEffects());
+        m_BonusHasBeenTouched.Raise();
+        DisableBonus();
+        //StartCoroutine(AddEffects());
     }
 
     private void DisableBonus()
@@ -32,7 +33,6 @@ public class BonusBase : MonoBehaviour
         if (m_particlesCollision != null) m_particlesCollision.Play();
         yield return new WaitForSeconds(.5f);
         DisableBonus();
-
     }
 
 }

@@ -40,9 +40,14 @@ public class GameManager : MonoBehaviour
         m_uiManager.UpdateScoreText(m_score);
     }
 
-    public void UpdateScore(float _score)
+    public void UpdateScore()
     {
         m_score += (int) m_bonusPoints.m_information;
+    }
+
+    public void BonusJump()
+    {
+        m_amountOfEnemyBounce.m_information += m_maxAmountOfBoost.m_information;
     }
 
     private IEnumerator SpeedMeter(float _time)
