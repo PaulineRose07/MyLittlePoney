@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,11 +17,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] FloatsScriptable m_amountOfEnemyBounce;
     [SerializeField] FloatsScriptable m_AngleOfLaunchData;
     [SerializeField] FloatsScriptable m_speedData;
+    [SerializeField] private FloatsScriptable m_maxAmountOfBoost;
     [SerializeField] private AnimationCurve m_animationCurve;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_amountOfEnemyBounce.m_information = 0;
     }
 
     // Update is called once per frame
@@ -50,7 +53,21 @@ public class GameManager : MonoBehaviour
     public void AddToEnemyCount()
     {
         m_amountOfEnemyBounce.m_information++;
-        Debug.Log(m_amountOfEnemyBounce);
+        UpdateBoostImageInUI();
+        Debug.Log(m_amountOfEnemyBounce.m_information);
+    }
+    public void onPlayerHasJumpedUpdateBoost()
+    {
+        m_amountOfEnemyBounce.m_information = 0;
+        UpdateBoostImageInUI();
+
+    }
+
+
+    private void UpdateBoostImageInUI()
+    {
+        float percentage = m_amountOfEnemyBounce.m_information / m_maxAmountOfBoost.m_information;
+        m_uiManager.UpdateBoostUI(percentage);
     }
 
     public void ChangeAngleOfLaunch(float _angleFromSlider)

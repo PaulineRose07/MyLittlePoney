@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89323887e76f08745b951916dd71244f, type: 3}
-  m_Name: AngleOfLaunchData
+  m_Name: maxAmountForBoost
   m_EditorClassIdentifier: 
-  m_information: 0.853408
+  m_information: 4
