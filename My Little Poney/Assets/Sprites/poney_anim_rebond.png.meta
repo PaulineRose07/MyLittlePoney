@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: poney_anim_rebond_0
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 105
+        width: 819
+        height: 909
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd68c5545365864385cbd4a0eb03cb3
+      internalID: 1947065941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poney_anim_rebond_1
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 91
+        width: 854
+        height: 842
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de423d804a4ea2d47986f281bcf53b82
+      internalID: -1912355315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +161,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      poney_anim_rebond_0: 1947065941
+      poney_anim_rebond_1: -1912355315
+      poney_anim_rebond_2: 1275570881
+      poney_anim_rebond_3: 1461245606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
