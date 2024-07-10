@@ -4401,62 +4401,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4024943156852841039, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024943156852841039, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_Interpolate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024943156852841039, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_angle
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_speedValue
-      value: 
-      objectReference: {fileID: 11400000, guid: eaa177609c8864847b5e7412d0166997, type: 2}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_speedOfSlam
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_angleOfLaunch
-      value: 
-      objectReference: {fileID: 11400000, guid: 92c4f4a3c5c1c61468e54938c8d388be, type: 2}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_maxAmountForBoost
-      value: 
-      objectReference: {fileID: 11400000, guid: e484acbdfe504834a8d9304f05e97d23, type: 2}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_onPlayerHasJumped
-      value: 
-      objectReference: {fileID: 11400000, guid: e0147737efbb95c42b17d45585e7546d, type: 2}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_onPlayerIsLaunching
-      value: 
-      objectReference: {fileID: 11400000, guid: 615b4eee65c437c4ba1c54e8af28bfb2, type: 2}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_onPlayerStoppedMoving
-      value: 
-      objectReference: {fileID: 11400000, guid: 60f5d0188832ba140a50a836180303cb, type: 2}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_amountOfEnemiesBounced
-      value: 
-      objectReference: {fileID: 11400000, guid: 3720b0d5cf7c72d46a5980537980fa95, type: 2}
-    - target: {fileID: 7807425482557119239, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
-      propertyPath: m_timerUntilScreenGameOver
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4472,7 +4416,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 57160639825592604, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
       propertyPath: m_Name
-      value: Enemies Spawner
+      value: Pool And Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 783072359663485135, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
       propertyPath: m_flyingEnemyPrefab

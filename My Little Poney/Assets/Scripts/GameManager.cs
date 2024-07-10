@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] FloatsScriptable m_amountOfEnemyBounce;
     [SerializeField] FloatsScriptable m_AngleOfLaunchData;
     [SerializeField] FloatsScriptable m_speedData;
+    [SerializeField] FloatsScriptable m_bonusPoints;
     [SerializeField] private FloatsScriptable m_maxAmountOfBoost;
     [SerializeField] private AnimationCurve m_animationCurve;
     [SerializeField] private Slider m_sliderLaunchingPlayer;
@@ -36,9 +37,9 @@ public class GameManager : MonoBehaviour
         m_uiManager.UpdateScoreText(m_score);
     }
 
-    public void UpdateScore()
+    public void UpdateScore(float _score)
     {
-        //Update the score depending of the distance
+        m_score += (int) m_bonusPoints.m_information;
     }
 
     public void UpdateDistance()
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour
     {
         m_speedData.m_information = m_animationCurve.Evaluate(m_sliderLaunchingPlayer.value);
     }
+
 
     /*public void ChangeSpeedOfLaunch(float _speedFromSlider)
     {

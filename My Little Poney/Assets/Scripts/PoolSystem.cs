@@ -16,6 +16,12 @@ public class PoolSystem : MonoBehaviour
     [SerializeField] private int m_amountOfFlyingEnemiesInPool;
     [SerializeField] private GameObject m_flyingEnemyPrefab;
     [SerializeField] private Transform m_flyingTransfom;
+    [Header("--- Bonus Pool ---")]
+    [SerializeField] private List<GameObject> m_poolOfBonus = new List<GameObject>();
+    [SerializeField] private int m_amountOfBonusesInPool;
+    [SerializeField] private GameObject m_bonusPrefab;
+    [SerializeField] private Transform m_bonusTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +38,26 @@ public class PoolSystem : MonoBehaviour
             instance.gameObject.SetActive(false);
             m_poolOfFlyingEnemy.Add(instance);
         }
+        
+        for(int i = 0; i <m_amountOfBonusesInPool; i++)
+        {
+            var instance = Instantiate(m_bonusPrefab, m_bonusTransform);
+            instance.gameObject.SetActive(false);
+            m_poolOfBonus.Add(instance);
+        }
+    }
+
+    public GameObject GetFirstAvailableBonus()
+    {
+        for(int i = 0; i < m_poolOfBonus.Count; i++)
+        {
+            if (m_poolOfBonus[i].activeSelf == false) return m_poolOfBonus[i];
+        }
+
+        var instance = Instantiate(m_bonusPrefab, m_bonusTransform);
+        instance.gameObject.SetActive(false);
+        m_poolOfBonus.Add(instance);
+        return instance;
     }
     public GameObject GetFirstAvailableFlyingEnemyInPool()
     {
