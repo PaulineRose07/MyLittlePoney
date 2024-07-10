@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 783072359663485135}
   - component: {fileID: 1266919353260672990}
   - component: {fileID: 2934159912782336764}
+  - component: {fileID: 376958818280900058}
   m_Layer: 0
   m_Name: Enemies Spawner
   m_TagString: Untagged
@@ -34,6 +35,7 @@ Transform:
   m_Children:
   - {fileID: 7246660462222389616}
   - {fileID: 8090897324986084536}
+  - {fileID: 2335080076565639150}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783072359663485135
@@ -56,10 +58,10 @@ MonoBehaviour:
   m_amountOfFlyingEnemiesInPool: 5
   m_flyingEnemyPrefab: {fileID: 5935133629786837327, guid: 1488af799093f7c4995fd24394e26081, type: 3}
   m_flyingTransfom: {fileID: 8090897324986084536}
-  m_poolOfBonus: []
-  m_amountOfBonusesInPool: 0
-  m_bonusPrefab: {fileID: 0}
-  m_bonusTransform: {fileID: 0}
+  m_poolOfStar: []
+  m_amountOfStarsInPool: 2
+  m_starPrefab: {fileID: 8094576131387871155, guid: 7f17e0d84949c0e4190a283465492a01, type: 3}
+  m_starTransform: {fileID: 2335080076565639150}
 --- !u!114 &1266919353260672990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,11 +76,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
   m_pool: {fileID: 783072359663485135}
-  m_spawningDelay: 1
   m_minOffsetOfSpawnX: 15
   m_maxOffsetOfSpawnX: 25
   m_amountOfSpawns: 2
   m_baseSpawnY: 1.48
+  m_spawningDelay: 1
 --- !u!114 &2934159912782336764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,12 +95,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
   m_pool: {fileID: 783072359663485135}
-  m_spawningDelay: 1.5
   m_minOffsetOfSpawnX: 15
   m_maxOffsetOfSpawnX: 25
   m_minOffsetY: 1
   m_maxOffsetY: 15
   m_amountOfSpawns: 2
+  m_spawningDelay: 1.5
+--- !u!114 &376958818280900058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57160639825592604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e126186c98744b240b0a034e3f7dbdf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_player: {fileID: 0}
+  m_pool: {fileID: 783072359663485135}
+  m_minOffsetOfSpawnX: 0
+  m_maxOffsetOfSpawnX: 0
+  m_minOffsetY: 0
+  m_maxOffsetY: 0
+  m_amountOfSpawns: 0
+  m_spawningDelay: 0
+  m_offsetBetweenSpawns: 0
 --- !u!1 &58080545807942172
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +148,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8785934231933493340}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4456270279208679649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2335080076565639150}
+  m_Layer: 0
+  m_Name: StarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2335080076565639150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456270279208679649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3912263474362610244}
   - component: {fileID: 5826025153578445311}
+  - component: {fileID: 9059680052827050047}
   m_Layer: 0
-  m_Name: etoile
+  m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,6 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9059680052827050047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455317327128414615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774d121d683da3c4fbbc0cd18b46bf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotationSpeed: -0.5
 --- !u!1 &8094576131387871155
 GameObject:
   m_ObjectHideFlags: 0

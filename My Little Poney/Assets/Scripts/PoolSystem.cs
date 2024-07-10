@@ -16,11 +16,11 @@ public class PoolSystem : MonoBehaviour
     [SerializeField] private int m_amountOfFlyingEnemiesInPool;
     [SerializeField] private GameObject m_flyingEnemyPrefab;
     [SerializeField] private Transform m_flyingTransfom;
-    [Header("--- Bonus Pool ---")]
-    [SerializeField] private List<GameObject> m_poolOfBonus = new List<GameObject>();
-    [SerializeField] private int m_amountOfBonusesInPool;
-    [SerializeField] private GameObject m_bonusPrefab;
-    [SerializeField] private Transform m_bonusTransform;
+    [Header("--- Star Pool ---")]
+    [SerializeField] private List<GameObject> m_poolOfStar = new List<GameObject>();
+    [SerializeField] private int m_amountOfStarsInPool;
+    [SerializeField] private GameObject m_starPrefab;
+    [SerializeField] private Transform m_starTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -39,24 +39,24 @@ public class PoolSystem : MonoBehaviour
             m_poolOfFlyingEnemy.Add(instance);
         }
         
-        for(int i = 0; i <m_amountOfBonusesInPool; i++)
+        for(int i = 0; i <m_amountOfStarsInPool; i++)
         {
-            var instance = Instantiate(m_bonusPrefab, m_bonusTransform);
+            var instance = Instantiate(m_starPrefab, m_starTransform);
             instance.gameObject.SetActive(false);
-            m_poolOfBonus.Add(instance);
+            m_poolOfStar.Add(instance);
         }
     }
 
-    public GameObject GetFirstAvailableBonus()
+    public GameObject GetFirstAvailableStart()
     {
-        for(int i = 0; i < m_poolOfBonus.Count; i++)
+        for(int i = 0; i < m_poolOfStar.Count; i++)
         {
-            if (m_poolOfBonus[i].activeSelf == false) return m_poolOfBonus[i];
+            if (m_poolOfStar[i].activeSelf == false) return m_poolOfStar[i];
         }
 
-        var instance = Instantiate(m_bonusPrefab, m_bonusTransform);
+        var instance = Instantiate(m_starPrefab, m_starTransform);
         instance.gameObject.SetActive(false);
-        m_poolOfBonus.Add(instance);
+        m_poolOfStar.Add(instance);
         return instance;
     }
     public GameObject GetFirstAvailableFlyingEnemyInPool()
