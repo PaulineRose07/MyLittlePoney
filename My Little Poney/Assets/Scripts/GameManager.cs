@@ -1,10 +1,6 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
