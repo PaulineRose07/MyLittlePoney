@@ -121,7 +121,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25811625, y: 0.063536644}
+  m_Offset: {x: -0.022813082, y: 0.063536644}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.731303, y: 8.232269}
+  m_Size: {x: 8.260696, y: 8.232269}
   m_EdgeRadius: 0
 --- !u!114 &6634417994242132302
 MonoBehaviour:
@@ -146,11 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21c773fa36c7bb49814d38eea2c0abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_minRandomSpeed: 1
-  m_maxRandomSpeed: 5
-  m_speedOfBounce: 11
-  m_timeForDisabling: 25
+  m_minRandomSpeed: 5
+  m_maxRandomSpeed: 10
+  m_speedOfBounce: 15
   m_waitForDisablingAfterEffects: 0.2
+  m_enemyMinLifeSpan: 20
+  m_enemyMaxLifeSpan: 30
   m_spriteRenderer: {fileID: 8003493931519927270}
   m_audioSource: {fileID: -726596642756439938}
   m_onCollisionSound: {fileID: 8300000, guid: f02bb98d15ca99d4bbd6fcf6a39e995f, type: 3}
