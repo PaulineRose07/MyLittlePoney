@@ -55,4 +55,9 @@ public class BasicEnemySpawner : MonoBehaviour
         m_canSpawnBasic = true;
         m_timerOfSpawn = 0.2f;
     }
+
+    public void GameHasEnded()
+    {
+        m_canSpawnBasic = false;
+    }
 }

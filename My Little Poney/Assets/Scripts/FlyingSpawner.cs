@@ -63,4 +63,9 @@ public class FlyingSpawner : MonoBehaviour
         m_canSpawnFlying = true;
         m_timerOfSpawn = 0.2f;
     }
+
+    public void GameHasEnded()
+    {
+        m_canSpawnFlying = false;
+    }
 }
