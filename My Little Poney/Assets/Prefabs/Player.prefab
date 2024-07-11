@@ -4926,7 +4926,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.35256028, y: -0.014689922}
+  m_Offset: {x: 0.4, y: -0.014689922}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4937,7 +4937,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0370145, y: 3.0468073}
+  m_Size: {x: 2.61, y: 2.48}
   m_EdgeRadius: 0
 --- !u!114 &7807425482557119239
 MonoBehaviour:
@@ -4955,7 +4955,7 @@ MonoBehaviour:
   m_angleOfLaunch: {fileID: 11400000, guid: 92c4f4a3c5c1c61468e54938c8d388be, type: 2}
   m_amountOfEnemiesBounced: {fileID: 11400000, guid: 3720b0d5cf7c72d46a5980537980fa95, type: 2}
   m_maxAmountForBoost: {fileID: 11400000, guid: e484acbdfe504834a8d9304f05e97d23, type: 2}
-  m_speedOfSlam: 13
+  m_speedOfSlam: 11
   m_rigidbody2D: {fileID: 4024943156852841039}
   m_audioSource: {fileID: 0}
   m_animator: {fileID: 7318780060727810895}
@@ -5022,7 +5022,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3224774648028728404}

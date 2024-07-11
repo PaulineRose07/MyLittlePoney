@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_poolOfBasicEnemy: []
-  m_amountOfBasicEnemiesInPool: 10
+  m_amountOfBasicEnemiesInPool: 15
   m_basicEnemyPrefab: {fileID: 7475046128454598632, guid: e065c9071596b04488e5f9049e971ff1, type: 3}
   m_basicTransform: {fileID: 7246660462222389616}
   m_poolOfFlyingEnemy: []
@@ -85,11 +85,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
   m_pool: {fileID: 783072359663485135}
-  m_minOffsetOfSpawnX: 15
+  m_minOffsetOfSpawnX: 20
   m_maxOffsetOfSpawnX: 25
-  m_amountOfSpawns: 2
-  m_baseSpawnY: 1.48
-  m_spawningDelay: 1
+  m_amountOfSpawns: 1
+  m_baseSpawnY: 1
+  m_spawningDelay: 0.45
 --- !u!114 &2934159912782336764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,9 +106,9 @@ MonoBehaviour:
   m_pool: {fileID: 783072359663485135}
   m_minOffsetOfSpawnX: 15
   m_maxOffsetOfSpawnX: 25
-  m_minOffsetY: 1
+  m_minOffsetY: 4
   m_maxOffsetY: 15
-  m_amountOfSpawns: 2
+  m_amountOfSpawns: 1
   m_spawningDelay: 1.5
 --- !u!114 &376958818280900058
 MonoBehaviour:
@@ -124,13 +124,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
   m_pool: {fileID: 783072359663485135}
-  m_minOffsetOfSpawnX: 0
-  m_maxOffsetOfSpawnX: 0
-  m_minOffsetY: 0
-  m_maxOffsetY: 0
-  m_amountOfSpawns: 0
-  m_spawningDelay: 0
-  m_offsetBetweenSpawns: 0
+  m_minOffsetOfSpawnX: 15
+  m_maxOffsetOfSpawnX: 25
+  m_minOffsetY: 1
+  m_maxOffsetY: 15
+  m_amountOfSpawns: 1
+  m_spawningDelay: 1
+  m_offsetBetweenSpawns: 4
 --- !u!114 &8335623495365202175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,11 +145,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
   m_pool: {fileID: 783072359663485135}
-  m_minOffsetOfSpawnX: 0
-  m_maxOffsetOfSpawnX: 0
-  m_amountOfSpawns: 0
-  m_baseSpawnY: 1.48
-  m_spawningDelay: 0
+  m_minOffsetOfSpawnX: 21
+  m_maxOffsetOfSpawnX: 25
+  m_amountOfSpawns: 1
+  m_baseSpawnY: 0.5
+  m_spawningDelay: 5
 --- !u!114 &6230564488643145577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,8 +340,8 @@ MonoBehaviour:
   m_firstChange: 100
   m_secondChange: 200
   m_basicEnemySpawner: {fileID: 1266919353260672990}
-  m_newSpawningTimeForUnicorns: 0.2
-  m_secondSpawningTimeForUnicorns: 0.5
+  m_newSpawningTimeForUnicorns: 0.25
+  m_secondSpawningTimeForUnicorns: 0.35
   m_flyingSpawner: {fileID: 2934159912782336764}
   m_newSpawningTimeForClouds: 0.2
   m_secondSpawningTimeForClouds: 0.5
