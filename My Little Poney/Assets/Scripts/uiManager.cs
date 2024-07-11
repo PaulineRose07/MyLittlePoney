@@ -86,4 +86,14 @@ public class uiManager : MonoBehaviour
     {
         m_boostImage.fillAmount = _percentage;
     }
+
+    public void QuitThisApp()
+    {
+        Application.Quit();
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
