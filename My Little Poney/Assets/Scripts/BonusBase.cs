@@ -16,8 +16,8 @@ public class BonusBase : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         m_BonusHasBeenTouched.Raise();
-        DisableBonus();
-        //StartCoroutine(AddEffects());
+        //DisableBonus();
+        StartCoroutine(AddEffects());
     }
 
     private void DisableBonus()

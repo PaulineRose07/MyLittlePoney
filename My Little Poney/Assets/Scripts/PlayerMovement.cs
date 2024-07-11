@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private AudioSource m_audioSource;
     [SerializeField] private Animator m_animator;
+    [SerializeField] private Collider2D m_collider2D;
     [Header("--- Game Ending ---")]
     private float m_timer;
     [SerializeField] private float m_timerUntilScreenGameOver = 1.5f;
@@ -46,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //m_isMoving = false;
         m_timer = m_timerUntilScreenGameOver;
+        m_collider2D.enabled = true;
         m_rigidbody2D.velocity = Vector3.zero;
         m_states = PlayerStates.Default;
     }
@@ -126,7 +128,9 @@ public class PlayerMovement : MonoBehaviour
         m_timer -= Time.deltaTime;
         if (m_timer <= 0)
         {
+            m_collider2D.enabled = false;
             m_onPlayerStoppedMoving.Raise();
+            
         }
     }
 

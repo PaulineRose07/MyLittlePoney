@@ -43,7 +43,7 @@ public class uiManager : MonoBehaviour
 
     public void UpdateScoreText(int _score)
     {
-        m_scoreText.text = _score.ToString() + " points";
+        m_scoreText.text = _score.ToString();
     }
 
     public void UpdateDistance(float _distance)
