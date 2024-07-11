@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class FlyingSpawner : MonoBehaviour
@@ -62,5 +61,6 @@ public class FlyingSpawner : MonoBehaviour
     public void EnemyCanSpawn()
     {
         m_canSpawnFlying = true;
+        m_timerOfSpawn = 0.2f;
     }
 }

@@ -1,8 +1,4 @@
-using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.Http.Headers;
-using System.Security.Cryptography;
+
 using UnityEngine;
 
 public class MainCameraBehavior : MonoBehaviour

@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
+
 using UnityEngine;
 
 public class BasicEnemySpawner : MonoBehaviour
@@ -55,5 +53,6 @@ public class BasicEnemySpawner : MonoBehaviour
     public void EnemyCanSpawn()
     {
         m_canSpawnBasic = true;
+        m_timerOfSpawn = 0.2f;
     }
 }
