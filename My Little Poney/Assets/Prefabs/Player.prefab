@@ -127,6 +127,7 @@ MonoBehaviour:
   m_angleOfBounce: 1
   m_rigidbody2D: {fileID: 4024943156852841039}
   m_audioSource: {fileID: 0}
+  m_animator: {fileID: 7318780060727810895}
   m_timerUntilScreenGameOver: 1.5
   m_particlesBouncing: {fileID: 0}
   m_soundOnJump: {fileID: 0}
