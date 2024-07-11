@@ -51,7 +51,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 708d17744bf0c4b4f852291aac23c9ef, type: 3}
   - {fileID: 21300000, guid: 3dfa09d2888c1c4488fd092de6aa5561, type: 3}
   m_spriteRenderer: {fileID: 1647667449785304717}
-  m_speedOfBounce: 18
+  m_speedOfBounce: 16
   m_timeForDisabling: 25
   m_waitForDisablingAfterEffects: 0.2
   m_audioSource: {fileID: 0}
