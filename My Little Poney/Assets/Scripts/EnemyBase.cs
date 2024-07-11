@@ -10,8 +10,11 @@ public class EnemyBase : MonoBehaviour
     private float m_randomSpeed;
     [Header("--- Enemy Info To Equilibrate ---")]
     [SerializeField] private float m_speedOfBounce = 15f;
-    [SerializeField] private float m_timeForDisabling = 10f;
+    //[SerializeField] private float m_timeForDisabling = 10f;
     [SerializeField] private float m_waitForDisablingAfterEffects = .2f;
+    [SerializeField] private float m_enemyMinLifeSpan;
+    [SerializeField] private float m_enemyMaxLifeSpan;
+    private float m_randomLife;
     [Space(12)]
     [SerializeField] private SpriteRenderer m_spriteRenderer;
     [Header("--- Effects Links ---")]
@@ -24,6 +27,7 @@ public class EnemyBase : MonoBehaviour
     private void Start()
     {
         m_randomSpeed = Random.Range(m_minRandomSpeed, m_maxRandomSpeed);
+        m_randomLife = Random.Range(m_enemyMinLifeSpan, m_enemyMaxLifeSpan);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,7 +43,7 @@ public class EnemyBase : MonoBehaviour
     }
     private void OnEnable()
     {
-        Invoke("DisableAfterAFewSeconds", m_timeForDisabling);
+        Invoke("DisableAfterAFewSeconds", m_randomLife);
     }
     private void DisableAfterAFewSeconds()
     {
