@@ -15,26 +15,29 @@ public class BasicEnemySpawner : MonoBehaviour
     [SerializeField] private float m_baseSpawnY = 1.48f;
     [SerializeField] private float m_spawningDelay;
     private float m_timerOfSpawn;
-    
-
+    private bool m_canSpawnBasic;
 
     // Start is called before the first frame update
     void Start()
     {
         m_timerOfSpawn =  m_spawningDelay;
+        m_canSpawnBasic = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_timerOfSpawn -= Time.deltaTime;
-        if(m_timerOfSpawn <= 0)
+        if (m_canSpawnBasic)
         {
-            for(int i = 0; i < m_amountOfSpawns; i++) 
+            m_timerOfSpawn -= Time.deltaTime;
+            if(m_timerOfSpawn <= 0)
             {
-                Spawn();
+                for(int i = 0; i < m_amountOfSpawns; i++) 
+                {
+                    Spawn();
+                }
+                m_timerOfSpawn = m_spawningDelay;
             }
-            m_timerOfSpawn = m_spawningDelay;
         }
     }
 
@@ -47,5 +50,10 @@ public class BasicEnemySpawner : MonoBehaviour
         GameObject instance = m_pool.GetFirstAvalailableBasicEnemyInPool();
         instance.transform.position = new Vector3(randomPositionX, m_baseSpawnY, 0);
         instance.SetActive(true);
+    }
+
+    public void EnemyCanSpawn()
+    {
+        m_canSpawnBasic = true;
     }
 }

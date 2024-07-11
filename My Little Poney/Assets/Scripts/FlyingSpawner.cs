@@ -15,30 +15,35 @@ public class FlyingSpawner : MonoBehaviour
     [SerializeField] private int m_amountOfSpawns;
     [SerializeField] private float m_spawningDelay;
     private float m_timerOfSpawn;
+    private bool m_canSpawnFlying;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        m_canSpawnFlying = false;
         m_timerOfSpawn = m_spawningDelay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_timerOfSpawn -= Time.deltaTime;
-        if (m_timerOfSpawn <= 0)
+        if (m_canSpawnFlying)
         {
-            for (int i = 0; i < m_amountOfSpawns; i++)
+            m_timerOfSpawn -= Time.deltaTime;
+            if (m_timerOfSpawn <= 0)
             {
-                Spawn();
+                for (int i = 0; i < m_amountOfSpawns; i++)
+                {
+                    Spawn();
+                }
+                m_timerOfSpawn = m_spawningDelay;
             }
-            m_timerOfSpawn = m_spawningDelay;
         }
     }
 
-    [ContextMenu("Test Spawn")]
+    //[ContextMenu("Test Spawn")]
     private void Spawn()
     {
         Vector3 offsetMinX = m_player.transform.position + Vector3.right * m_minOffsetOfSpawnX;
@@ -54,4 +59,8 @@ public class FlyingSpawner : MonoBehaviour
         instance.SetActive(true);
     }
 
+    public void EnemyCanSpawn()
+    {
+        m_canSpawnFlying = true;
+    }
 }

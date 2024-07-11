@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2934159912782336764}
   - component: {fileID: 376958818280900058}
   - component: {fileID: 8335623495365202175}
+  - component: {fileID: 6230564488643145577}
   m_Layer: 0
   m_Name: Enemies Spawner
   m_TagString: Untagged
@@ -147,6 +148,46 @@ MonoBehaviour:
   m_amountOfSpawns: 0
   m_baseSpawnY: 1.48
   m_spawningDelay: 0
+--- !u!114 &6230564488643145577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57160639825592604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af49f4f854bc2e47824969f3928c362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameEvent: {fileID: 11400000, guid: 615b4eee65c437c4ba1c54e8af28bfb2, type: 2}
+  m_response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1266919353260672990}
+        m_TargetAssemblyTypeName: BasicEnemySpawner, Assembly-CSharp
+        m_MethodName: EnemyCanSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2934159912782336764}
+        m_TargetAssemblyTypeName: FlyingSpawner, Assembly-CSharp
+        m_MethodName: EnemyCanSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &58080545807942172
 GameObject:
   m_ObjectHideFlags: 0
