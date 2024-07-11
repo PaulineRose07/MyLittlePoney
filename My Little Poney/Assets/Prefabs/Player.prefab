@@ -127,13 +127,13 @@ MonoBehaviour:
   m_angleOfBounce: 1
   m_rigidbody2D: {fileID: 4024943156852841039}
   m_audioSource: {fileID: 0}
+  m_animator: {fileID: 7318780060727810895}
   m_timerUntilScreenGameOver: 0.5
   m_particlesBouncing: {fileID: 0}
   m_soundOnJump: {fileID: 0}
   m_onPlayerStoppedMoving: {fileID: 11400000, guid: 60f5d0188832ba140a50a836180303cb, type: 2}
   m_onPlayerIsLaunching: {fileID: 11400000, guid: 615b4eee65c437c4ba1c54e8af28bfb2, type: 2}
   m_onPlayerHasJumped: {fileID: 11400000, guid: e0147737efbb95c42b17d45585e7546d, type: 2}
-  m_onGroundHasBeenTouched: {fileID: 0}
 --- !u!1 &7018094861023294523
 GameObject:
   m_ObjectHideFlags: 0

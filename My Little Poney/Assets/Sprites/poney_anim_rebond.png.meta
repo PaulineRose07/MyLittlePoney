@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 120
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,10 +113,10 @@ TextureImporter:
       name: poney_anim_rebond_0
       rect:
         serializedVersion: 2
-        x: 118
-        y: 105
-        width: 819
-        height: 909
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: poney_anim_rebond_1
       rect:
         serializedVersion: 2
-        x: 1095
-        y: 91
-        width: 854
-        height: 842
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,6 @@ TextureImporter:
     nameFileIdTable:
       poney_anim_rebond_0: 1947065941
       poney_anim_rebond_1: -1912355315
-      poney_anim_rebond_2: 1275570881
-      poney_anim_rebond_3: 1461245606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

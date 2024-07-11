@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public void BonusJump()
     {
         m_amountOfEnemyBounce.m_information += m_maxAmountOfBoost.m_information;
+        UpdateBoostImageInUI();
     }
 
     private IEnumerator SpeedMeter(float _time)
