@@ -16,8 +16,8 @@ public class BonusBase : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         m_BonusHasBeenTouched.Raise();
-        DisableBonus();
-        //StartCoroutine(AddEffects());
+        //DisableBonus();
+        StartCoroutine(AddEffects());
     }
 
     private void DisableBonus()
@@ -29,7 +29,7 @@ public class BonusBase : MonoBehaviour
     private IEnumerator AddEffects()
     {
         m_spriteRenderer.enabled = false;
-        if (m_particlesCollision != null) m_particlesCollision.Play();
+        m_particlesCollision.Play();
         yield return new WaitForSeconds(.5f);
         DisableBonus();
     }
