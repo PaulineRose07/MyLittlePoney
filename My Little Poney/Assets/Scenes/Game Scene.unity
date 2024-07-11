@@ -863,6 +863,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_onGroundHasBeenTouched: {fileID: 11400000, guid: df285c87911557c4ea73e62943a09de0, type: 2}
+--- !u!114 &1380172803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 745412500310856210, guid: 2199d47afaf7a174186e1191df73def9, type: 3}
+  m_PrefabInstance: {fileID: 1993324828157258969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc06f515f201e049be3e9bb0c97936d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1392324065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3224774648028728404, guid: 62089ee7ec9f5b54cb78a3f169745368, type: 3}
@@ -1069,7 +1080,7 @@ Transform:
   m_GameObject: {fileID: 2049999469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.278529, y: 4.9116297, z: -10}
+  m_LocalPosition: {x: 6.67391, y: 4.90611, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1616,6 +1627,10 @@ PrefabInstance:
       propertyPath: m_amountOfSpawns
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3700310081046338199, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
+      propertyPath: m_gameManager
+      value: 
+      objectReference: {fileID: 1380172803}
     - target: {fileID: 8335623495365202175, guid: 9a34719e5debb7f4a92debaf118bceaa, type: 3}
       propertyPath: m_player
       value: 

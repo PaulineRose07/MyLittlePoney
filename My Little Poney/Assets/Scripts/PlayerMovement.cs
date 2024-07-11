@@ -129,4 +129,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void OnTouchingGroundParticles()
+    {
+        m_particlesBouncing.Play();
+    }
+
 }
