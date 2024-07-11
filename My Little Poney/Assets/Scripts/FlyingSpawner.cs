@@ -61,11 +61,16 @@ public class FlyingSpawner : MonoBehaviour
     public void EnemyCanSpawn()
     {
         m_canSpawnFlying = true;
-        m_timerOfSpawn = 0.2f;
+        m_timerOfSpawn = 0.1f;
     }
 
     public void GameHasEnded()
     {
         m_canSpawnFlying = false;
+    }
+
+    public void UpdateSpawner(float _time)
+    {
+        m_spawningDelay += _time;
     }
 }

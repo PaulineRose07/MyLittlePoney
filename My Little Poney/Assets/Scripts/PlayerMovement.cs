@@ -1,7 +1,4 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
+
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,8 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] FloatsScriptable m_amountOfEnemiesBounced;
     [SerializeField] FloatsScriptable m_maxAmountForBoost;
     [SerializeField] private float m_speedOfSlam;
-    [Header("--- Bounce Information ---")]
-    [SerializeField] private float m_angleOfBounce = 1;
     [Header("--- Links ---")]
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private AudioSource m_audioSource;

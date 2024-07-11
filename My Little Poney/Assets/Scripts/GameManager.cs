@@ -8,9 +8,10 @@ public class GameManager : MonoBehaviour
     [Header("--- In Game Links ---")]
     [SerializeField] uiManager m_uiManager;
     [SerializeField] GameObject m_player;
+    [SerializeField] SpawnRateChange m_spawnRateChange;
     [Header("--- Info ---")]
     [SerializeField] private int m_score;
-    [SerializeField] private int m_distance;
+    [SerializeField] public int m_distance;
     [SerializeField] private float m_speedOfRange;
     [Header("--- Scriptable Objects ---")]
     [SerializeField] FloatsScriptable m_amountOfEnemyBounce;

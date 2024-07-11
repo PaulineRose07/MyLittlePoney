@@ -53,11 +53,16 @@ public class BasicEnemySpawner : MonoBehaviour
     public void EnemyCanSpawn()
     {
         m_canSpawnBasic = true;
-        m_timerOfSpawn = 0.2f;
+        m_timerOfSpawn = 0.1f;
     }
 
     public void GameHasEnded()
     {
         m_canSpawnBasic = false;
+    }
+
+    public void UpdateSpawner(float _time)
+    {
+        m_spawningDelay += _time;
     }
 }

@@ -40,6 +40,7 @@ Transform:
   - {fileID: 8090897324986084536}
   - {fileID: 2335080076565639150}
   - {fileID: 3988948952956453978}
+  - {fileID: 5583015615791444542}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783072359663485135
@@ -291,6 +292,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8785934231933493340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6117460542137576227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5583015615791444542}
+  - component: {fileID: 3700310081046338199}
+  m_Layer: 0
+  m_Name: SpawnRate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5583015615791444542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6117460542137576227}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8785934231933493340}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3700310081046338199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6117460542137576227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a08717ef94a46c4781db17ad9ab359f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameManager: {fileID: 0}
+  m_firstChange: 100
+  m_secondChange: 200
+  m_basicEnemySpawner: {fileID: 1266919353260672990}
+  m_newSpawningTimeForUnicorns: 0.2
+  m_secondSpawningTimeForUnicorns: 0.5
+  m_flyingSpawner: {fileID: 2934159912782336764}
+  m_newSpawningTimeForClouds: 0.2
+  m_secondSpawningTimeForClouds: 0.5
 --- !u!1 &6123591273272202494
 GameObject:
   m_ObjectHideFlags: 0
