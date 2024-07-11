@@ -94,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.35256028, y: -0.014689922}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -105,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.0370145, y: 3.0468073}
   m_EdgeRadius: 0
 --- !u!114 &7807425482557119239
 MonoBehaviour:
@@ -123,17 +123,17 @@ MonoBehaviour:
   m_angleOfLaunch: {fileID: 11400000, guid: 92c4f4a3c5c1c61468e54938c8d388be, type: 2}
   m_amountOfEnemiesBounced: {fileID: 11400000, guid: 3720b0d5cf7c72d46a5980537980fa95, type: 2}
   m_maxAmountForBoost: {fileID: 11400000, guid: e484acbdfe504834a8d9304f05e97d23, type: 2}
-  m_speedOfSlam: 12
+  m_speedOfSlam: 15
   m_angleOfBounce: 1
   m_rigidbody2D: {fileID: 4024943156852841039}
   m_audioSource: {fileID: 0}
-  m_animator: {fileID: 7318780060727810895}
-  m_timerUntilScreenGameOver: 1.5
+  m_timerUntilScreenGameOver: 0.5
   m_particlesBouncing: {fileID: 0}
   m_soundOnJump: {fileID: 0}
   m_onPlayerStoppedMoving: {fileID: 11400000, guid: 60f5d0188832ba140a50a836180303cb, type: 2}
   m_onPlayerIsLaunching: {fileID: 11400000, guid: 615b4eee65c437c4ba1c54e8af28bfb2, type: 2}
   m_onPlayerHasJumped: {fileID: 11400000, guid: e0147737efbb95c42b17d45585e7546d, type: 2}
+  m_onGroundHasBeenTouched: {fileID: 0}
 --- !u!1 &7018094861023294523
 GameObject:
   m_ObjectHideFlags: 0

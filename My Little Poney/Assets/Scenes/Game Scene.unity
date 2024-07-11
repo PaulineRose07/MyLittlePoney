@@ -635,12 +635,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7118428959346749243, guid: cbcdc0e3a7252934791114d9fb4b8fd8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118428959346749243, guid: cbcdc0e3a7252934791114d9fb4b8fd8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b3b848a0b2f9ef45bf89954b6e765a9, type: 3}
+    - target: {fileID: 7118428959346749243, guid: cbcdc0e3a7252934791114d9fb4b8fd8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118428959346749243, guid: cbcdc0e3a7252934791114d9fb4b8fd8, type: 3}
       propertyPath: m_Color.g
-      value: 0.69411767
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118428959346749243, guid: cbcdc0e3a7252934791114d9fb4b8fd8, type: 3}
       propertyPath: m_Color.r
-      value: 0.8593688
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7268582521210979892, guid: cbcdc0e3a7252934791114d9fb4b8fd8, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1189,7 +1201,7 @@ Transform:
   m_GameObject: {fileID: 2049999469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.67391, y: 4.90611, z: -10}
+  m_LocalPosition: {x: 9.282394, y: 4.9116297, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

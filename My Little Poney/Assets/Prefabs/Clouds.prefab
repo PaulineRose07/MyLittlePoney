@@ -51,7 +51,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 708d17744bf0c4b4f852291aac23c9ef, type: 3}
   - {fileID: 21300000, guid: 3dfa09d2888c1c4488fd092de6aa5561, type: 3}
   m_spriteRenderer: {fileID: 1647667449785304717}
-  m_speedOfBounce: 13
+  m_speedOfBounce: 20
   m_timeForDisabling: 25
   m_waitForDisablingAfterEffects: 0.2
   m_audioSource: {fileID: 0}
@@ -90,7 +90,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.7207482, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -101,7 +101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.27, y: 1.61}
+  m_Size: {x: 6.711496, y: 1.61}
   m_EdgeRadius: 0
 --- !u!1 &6270308234877132440
 GameObject:
