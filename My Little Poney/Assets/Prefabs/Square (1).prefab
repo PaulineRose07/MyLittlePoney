@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_minRandomSpeed: 1
-  m_maxRandomSpeed: 5
+  m_maxRandomSpeed: 4
   m_speedOfBounce: 13
   m_waitForDisablingAfterEffects: 0.2
   m_enemyMinLifeSpan: 10

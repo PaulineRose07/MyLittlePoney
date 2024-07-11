@@ -146,12 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21c773fa36c7bb49814d38eea2c0abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_minRandomSpeed: 4
-  m_maxRandomSpeed: 8
-  m_speedOfBounce: 15
+  m_minRandomSpeed: 2
+  m_maxRandomSpeed: 5
+  m_speedOfBounce: 10
   m_waitForDisablingAfterEffects: 0.2
   m_enemyMinLifeSpan: 20
-  m_enemyMaxLifeSpan: 23
+  m_enemyMaxLifeSpan: 20
   m_spriteRenderer: {fileID: 8003493931519927270}
   m_audioSource: {fileID: -726596642756439938}
   m_onCollisionSound: {fileID: 8300000, guid: f02bb98d15ca99d4bbd6fcf6a39e995f, type: 3}
