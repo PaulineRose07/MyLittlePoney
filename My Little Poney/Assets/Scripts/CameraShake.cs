@@ -6,7 +6,7 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera m_cinemachineVirtualCamera;
-    [SerializeField] private float m_shakeTimer;
+    private float m_shakeTimer;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -23,15 +23,6 @@ public class CameraShake : MonoBehaviour
         m_shakeTimer = _time;
     }
 
-    public void CameraEnabled()
-    {
-        enabled = true;
-    }
-
-    public void CameraDisabled()
-    {
-        enabled = false;
-    }
     private void Update()
     {
         if (m_shakeTimer > 0)

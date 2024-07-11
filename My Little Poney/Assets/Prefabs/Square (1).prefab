@@ -148,8 +148,9 @@ MonoBehaviour:
   m_minRandomSpeed: 1
   m_maxRandomSpeed: 5
   m_speedOfBounce: 13
-  m_timeForDisabling: 25
   m_waitForDisablingAfterEffects: 0.2
+  m_enemyMinLifeSpan: 10
+  m_enemyMaxLifeSpan: 15
   m_spriteRenderer: {fileID: 8003493931519927270}
   m_audioSource: {fileID: -726596642756439938}
   m_onCollisionSound: {fileID: 8300000, guid: f02bb98d15ca99d4bbd6fcf6a39e995f, type: 3}
