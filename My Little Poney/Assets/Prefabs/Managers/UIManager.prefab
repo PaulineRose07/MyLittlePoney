@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2737230835645314506}
   - component: {fileID: 516584295624577198}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Distance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,6 +659,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_scoreText: {fileID: 1613161541019506972}
   m_distanceText: {fileID: 3802999999976492435}
+  m_gameOverDistanceText: {fileID: 4137431245371251623}
+  m_gameOverScoreText: {fileID: 626134871063230188}
   m_speedMeterScreen: {fileID: 2010711649646917739}
   m_gameOverPanel: {fileID: 8655526754534861917}
   m_speedMeterSlider: {fileID: 7955399297737967427}
@@ -975,7 +977,7 @@ GameObject:
   - component: {fileID: 2564560022895319627}
   - component: {fileID: 626134871063230188}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Score SCORE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1243,7 +1245,7 @@ GameObject:
   - component: {fileID: 1272205243402767603}
   - component: {fileID: 4137431245371251623}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Distance SCORE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1541,7 +1543,7 @@ GameObject:
   - component: {fileID: 9110114648946609006}
   - component: {fileID: 5203991563196968163}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1891,7 +1893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &797622572826069668
 RectTransform:
   m_ObjectHideFlags: 0

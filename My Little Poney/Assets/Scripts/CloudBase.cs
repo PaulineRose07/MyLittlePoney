@@ -26,7 +26,8 @@ public class CloudBase : MonoBehaviour
         m_onCollisionWithPlayer.Raise();
         collision.TryGetComponent<PlayerMovement>(out PlayerMovement _player);
         _player.BoucingOnThings(m_speedOfBounce);
-        gameObject.SetActive(false);
+        StartCoroutine(JuiceWhenCollision());
+        //gameObject.SetActive(false);
     }
 
     private void OnEnable()

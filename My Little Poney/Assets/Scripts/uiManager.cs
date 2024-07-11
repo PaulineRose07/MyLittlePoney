@@ -10,6 +10,8 @@ public class uiManager : MonoBehaviour
     [Header("--- Texts ---")]
     [SerializeField] private TMP_Text m_scoreText;
     [SerializeField] private TMP_Text m_distanceText;
+    [SerializeField] private TMP_Text m_gameOverDistanceText;
+    [SerializeField] private TMP_Text m_gameOverScoreText;
     [Header("--- Links ---")]
     [SerializeField] private GameObject m_speedMeterScreen;
     [SerializeField] private GameObject m_gameOverPanel;
@@ -52,6 +54,8 @@ public class uiManager : MonoBehaviour
     public void GameHasEnded()
     {
         m_gameOverPanel.SetActive(true);
+        m_gameOverDistanceText.text = m_distanceText.text;
+        m_gameOverScoreText.text = m_scoreText.text;
     }
 
     public void RetryGame()
